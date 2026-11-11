@@ -1,12 +1,13 @@
-# actuaria+ en 100 sesiones
+# actuaria+ en 100
 
-Si actuaria+ tuviera 100 sesiones: desde qué dispositivo entran, cómo llegan, por qué pantalla entran, si es su primera
-vez, qué hacen (iniciar sesión, enviar un formulario, descargar…) y dónde se traban (clics que no responden, retrocesos
-rápidos, clics de rabia), además del cuándo.
+Dos vistas. «100 sesiones» (androides): cómo llegan, por qué pantalla entran, qué hacen, cómo les fue (sin tropiezos,
+con algún tropiezo o con señales de enojo), si comienzan un estudio nuevo y cuándo. «100 usuarios» (personas): si
+vuelven, qué hicieron alguna vez y si alguna vez se trabaron.
 
-Datos de Microsoft Clarity de plus.actuaria.com, del 1 de diciembre de 2025 al 10 de noviembre de 2026: 25.066 sesiones, sin bots ni
-tráfico interno. Las 100 figuras son sesiones representativas armadas con totales de Clarity para que reproduzcan cada
-uno; no son registros de personas. `datos.json` trae las 100 sesiones y los porcentajes reales.
+Datos de Microsoft Clarity de plus.actuaria.com, del 1 de diciembre de 2025 al 10 de noviembre de 2026: 7.722 usuarios y 25.066 sesiones,
+sin bots ni tráfico interno. Las figuras son sesiones y usuarios representativos, armados con totales de Clarity para que
+reproduzcan cada uno; no son registros de personas. `datos.json` trae las 100 sesiones, los 100 usuarios, los porcentajes
+y los conteos reales.
 
 Página: https://renatopuente-ux.github.io/actuariaplus-en-100/
 
