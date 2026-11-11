@@ -19,174 +19,267 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   /* Actuaria type system: Lemon Milk Pro (site's own files on the Webflow CDN) for titles and big numbers, Nunito for
-     labels, Prompt for text. Dark navy stage so the coloured spotlights read; brand navy/indigo/orange lead the palette. */
+     labels, Prompt for text. Icons: Font Awesome Free 6.7.2 Solid cut down to this page's 13 icons and embedded below
+     (font SIL OFL 1.1, icons CC BY 4.0). */
   @font-face { font-family: "Lemon Milk Pro"; src: url("https://cdn.prod.website-files.com/6967c96e0fba2ea4f94d3c69/6a8349e767be686373ed8862_Lemon%20Milk%20Pro%20Regular.otf") format("opentype"); font-weight: 400; font-display: swap; }
   @font-face { font-family: "Lemon Milk Pro"; src: url("https://cdn.prod.website-files.com/6967c96e0fba2ea4f94d3c69/6a8349e6425dae8dfa2a027d_Lemon%20Milk%20Pro%20Bold.otf") format("opentype"); font-weight: 700; font-display: swap; }
+  @font-face { font-family: "FA"; src: url("data:font/woff2;base64,d09GMgABAAAAAAckAAoAAAAADxAAAAbZAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgQQKlXSRUAseAAE2AiQDOAQgBYMYByAbHQzInoWx86IjxMmT7F416gsjgucBT//PbcdkydR6yJh2HfwItE9OH9QveniQPuTZ83bYm8T7A6CCO6hO/RGiKeNju+uDdn1wZfbMf336joeCrz/ffrOi2ogTi/o6cSymO0w/B8xEb2JS4l4Xu4l6aRLinuUMJIXOb51SM3Y1ee4UxNlyc0+IB+mPXYJeV6/f8LK52Eayna4R0vimLqOGDcD6MfG3BfKl5XWQQ/QDBEC64C5gAGAD7IADOwLyOCKX95CGnaQfE3/Ufhz748ofm3bUVld9+O6/LWgBZXJTlLb836mn/p76TOr1qT3Kx/RjvVTvUz4qDyGgQKd2FlAEcXEH2zSEga6PsYKwScQST4dIQEjC7nflVvtzMnM6dkw2NZq6+P1mKDOTU0raBVPgIKWlVRk5iS2jYiEgDaUSLUkchbIzECmwgvEXqO1PDxb8HG45DVXDRbclZ4eeHKnsGYgcOLjoyk6XFFOibkuNOYUofFL27hSJp7pMZWc+ksBYHSsPcUAoQ425lQiYrCpPLkWJc4MEP7rtkmjX5oFHR57uf7hzI1aXpgFHRoxUNQZoCHyeyeB7Sc5uuzBRV8WcgIHl6IWW8kYZqsB6n1b7KNzQrw/u+Lzn3tYO0R2603Aa7npJi/xgjBXgEik7SxKfG6oXy2W6TIfuqJEs73qHZ2qsk1r4HiIHQWyPPe2KrG421lTnFQc7STSkJFVjwdjrBGrEqsniO93Nv9HxubKzPR8lJCpIFFIVRqIAImFUMUg09kRTHwsAkScHTjAuKkUYSv25cEuS4pI9wylEwHAaDv7hO3QZhy5wSb7LlEmYArfiuy2ZgqVdlIM5edQPeGaoxop8r4PlsQtv8Q8WBz5X1MMSYN1RLLQfjjTubW/Bx0rBPeN61f0+B3qcG3bnlJiVXZAerbjbbgLiFDlYhNVVFU6Rr8bM0M+wsiVNRYFbHBzzCm95NFC6GnVjj2Br1teoOCgdBfC4LedvjSOvFmxATG0clYWABjuGaOvpxqdyrxBV/4gKsg6cXCTlcjCuy84QogP6YiRFRSlJWvc2nmY3HjsYe3NgB6LCEgQliS8XXig1GeD8ndG6w3AyWG7TpbGAIN3ioPCWxynyzdAvPMrzxQBRthdsmztl2cBl+gDPbZnlfqM07y/e5dALNQBsacsgDZOIBHUJqCI5QkjCIseD1K1iolx/gHpkPxzA9/5rKHgJjdlaV77W2thYcMHwYa/1lU7IkLnSsyu1E7SVZzWZq8rrK8v0xsgdGmg7WmBrmr1hAxeAajd/9hy+/CpFxshANDA8qEFdKnbObDwg7cwmtnTqwU1wc7uWbt2y2t18UwQyDjHmix5TuzMehjidQypf8aNJCiyDIZh5TN8O23WM0vgycFdfku9qaGg28KmneeppmHrAbq/e15Zoc9/02oIP0ujJrOY1q15uflKI1stNw2cbebMiEbYaHVt7QLAk0Fx/1pNP7rda6Jua6pEH2rQ9EA4n1tcWHEVl3g7VFeFIsvwl346E6dQw2QR9iMk81Pkh+M5i8rVJ8agHH3SIG649lE6kK7OkpKc/ZBHBaPM5H0xzZ85jXiaL6s1eHcbgpfYy6xfFYFpp97TFS8d0AOdYOnVJFUlxK8mSqeTFB/737YE94+d7vfPH79nji2BE+rAghUg5cTw///iJlJRuwOCFufbgh9lQehKadP1Xc2n2h+Pl98o+fV46mdZHKpG+oyu2Lb/d3/OypWCs17qt2NK+3+stbb/lD9bN8UeS2aoPa2nHaHgQFLmDvKXt/IkWmK3GeLBCS/WeyXQTVbmjHKP03HOEc0y6Zj0DzyQlJc9YAqhkQv7KIE9HDtq4M/J0GMUnYGuoK5VAp4bGF+tMK/mwpkavQH8N/7AySFtJZ7BeeP9DXf9vgP2ZjA22bUjoa9MmlADhLHP9lVtvfWVyTLhXmiE1kkbl5SP2yWQ/crnS8KOAURo57k4Nu4t5wCShA2vyU3mo0TJB2LDB/GJmre/RtJ/He/V6QwICECTeaibOIUOcACBgT8ynv5o7MCl18rckNYcAPtk497bPHi153RaTQ0ASNoX2L81pswpov2kvuKmsywFI4yGohWEjgB8QsDJQy//FIhswy0wUIcpKicc44dybWA6eyFjsSFxxJrWiBf5CNef9bSgc9bfTkZu6xxX7xzOdUlOCHA56EmYhS+nCCmawhDALyLueniwGEFvGsGTsfOaoTCPPpsXFljnVYw1a3WvXUU4lVbQRUw3Rq5MNAjZ7M3imwXILprbsXU85reZbTVCTXI/RI2WjW5kWy+hsG6ZuEhthVWb+HGYxW7dwAaYRxLA0fjsGAA==") format("woff2"); font-weight: 900; font-display: block; }
+  .fa { font-family: "FA"; font-weight: 900; font-style: normal; line-height: 1; display: inline-block; -webkit-font-smoothing: antialiased; }
+
+  /* Neumorphic system (neu / glass / bento of Actuaria). Light is the default: the double shadows only read on a light
+     surface. Affordance: raised or glass = you can press it; sunken = data. Every shadow and light carries the tint of
+     the surface it falls on, never pure white or black. */
   :root {
     --f-display: "Lemon Milk Pro", Tahoma, sans-serif; --f-sub: Nunito, system-ui, sans-serif; --f-body: Prompt, system-ui, sans-serif;
-    --bg: #070b1c; --bg-2: #0c1230; --linea: rgba(214, 222, 255, .12); --tinta: #e9ecf6; --tinta-2: rgba(233, 236, 246, .74); --tinta-3: rgba(233, 236, 246, .52);
-    --naranja: #f0794a; --naranja-suave: #ffbba1; --indigo: #7088f2;
+    --fondo: #f3f6fc; --sup: #e8ecf4; --sup-2: #eef1f8;
+    --tinta: #151f47; --tinta-2: rgba(21, 31, 71, .8); --tinta-3: rgba(21, 31, 71, .68);
+    --acento: #4c64d9; --acento-texto: #2f5fcc; --naranja: #df5e2d; --naranja-texto: #a8431c;
+    --sd: rgba(163, 177, 198, .70); --sl: rgba(245, 248, 255, .93);
+    --neu-out: 6px 6px 16px var(--sd), -6px -6px 16px var(--sl);
+    --neu-out-sm: 3px 3px 8px var(--sd), -3px -3px 8px var(--sl);
+    --neu-in: inset 4px 4px 10px var(--sd), inset -4px -4px 10px var(--sl);
+    --neu-in-sm: inset 2px 2px 5px var(--sd), inset -2px -2px 5px var(--sl);
+    --vidrio-velo: rgba(255, 255, 255, .3); --vidrio-brillo: rgba(255, 255, 255, .4); --vidrio-canto-a: rgba(255, 255, 255, .95); --vidrio-canto-b: rgba(255, 255, 255, .45); --vidrio-canto-c: rgba(160, 168, 186, .18);
+    --burbuja-a: rgba(76, 100, 217, .22); --burbuja-b: rgba(223, 94, 45, .16); --burbuja-c: rgba(98, 184, 232, .18);
+    --ficha: rgba(243, 246, 252, .97); --ficha-borde: rgba(21, 31, 71, .12);
+    --primario: #151f47; --primario-tinta: #ffffff; --primario-hover: #2a3a80;
+    color-scheme: light;
+  }
+  :root[data-tema="oscuro"] {
+    --fondo: #0b1022; --sup: #141a31; --sup-2: #182038;
+    --tinta: #e9ecf6; --tinta-2: rgba(233, 236, 246, .82); --tinta-3: rgba(233, 236, 246, .66);
+    --acento: #8a9cff; --acento-texto: #a9b6ff; --naranja: #f0794a; --naranja-texto: #ffbba1;
+    --sd: rgba(2, 4, 12, .62); --sl: rgba(56, 68, 110, .38);
+    --vidrio-velo: rgba(255, 255, 255, .06); --vidrio-brillo: rgba(255, 255, 255, .10); --vidrio-canto-a: rgba(255, 255, 255, .45); --vidrio-canto-b: rgba(255, 255, 255, .14); --vidrio-canto-c: rgba(255, 255, 255, .04);
+    --burbuja-a: rgba(112, 136, 242, .22); --burbuja-b: rgba(240, 121, 74, .14); --burbuja-c: rgba(98, 184, 232, .14);
+    --ficha: rgba(16, 21, 42, .97); --ficha-borde: rgba(255, 255, 255, .16);
+    --primario: #e9ecf6; --primario-tinta: #0b1022; --primario-hover: #ffffff;
+    color-scheme: dark;
   }
   * { box-sizing: border-box; }
   /* The scrollbar is always reserved: the page height changes with each indicator, and a scrollbar that came and went
      changed the stage width, which redid the layout without animation (the figures jumped instead of walking). */
   html { overflow-y: scroll; scrollbar-gutter: stable; }
-  html, body { margin: 0; background: var(--bg); color: var(--tinta); font: 400 15px/1.55 var(--f-body); -webkit-font-smoothing: antialiased; }
-  a { color: var(--naranja-suave); }
+  html, body { margin: 0; background: var(--fondo); color: var(--tinta); font: 400 15px/1.55 var(--f-body); -webkit-font-smoothing: antialiased; transition: background-color .3s, color .3s; }
+  /* soft moving blobs behind everything: the glass frame of the stage is clear, so they are what you see through it */
+  body::before, body::after { content: ""; position: fixed; z-index: -1; width: 46vmax; height: 46vmax; border-radius: 50%; filter: blur(60px); pointer-events: none; }
+  body::before { left: -12vmax; top: -10vmax; background: radial-gradient(circle, var(--burbuja-a), transparent 65%); animation: flotar 26s ease-in-out infinite alternate; }
+  body::after { right: -14vmax; top: 30vh; background: radial-gradient(circle, var(--burbuja-b), transparent 65%), radial-gradient(circle at 30% 70%, var(--burbuja-c), transparent 60%); animation: flotar 32s ease-in-out infinite alternate-reverse; }
+  @keyframes flotar { to { transform: translate(8vmax, 6vmax) scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
+  a { color: var(--acento-texto); }
   button { font: inherit; color: inherit; }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-  .cab { position: relative; z-index: 3; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px 24px; padding: 18px 28px 8px; }
-  .marca { display: flex; align-items: center; gap: 12px; font: 700 19px/1.1 var(--f-display); letter-spacing: .2px; margin: 0; white-space: nowrap; }
-  .marca a { display: inline-flex; line-height: 0; }
-  .marca svg { width: 132px; height: auto; }
+  /* minmax(0, 1fr): without it the grid track takes the min-content of the chips row (no wrap on phones) and the whole
+     page ran 325 px wider than a 390 px screen */
+  .pagina { max-width: 1480px; margin: 0 auto; padding: 18px 24px 28px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .pagina-cuerpo { display: grid; grid-template-columns: minmax(0, 1fr); gap: inherit; }
+  .bento { background: var(--sup); border-radius: 24px; box-shadow: var(--neu-out); transition: background-color .3s, box-shadow .3s; }
+
+  /* header bento: brand · lenses · theme · period and total */
+  .cab { position: relative; z-index: 6; display: grid; grid-template-columns: auto 1fr auto auto; grid-template-areas: "marca lentes resumen tema"; align-items: center; gap: 12px 20px; padding: 14px 18px 14px 22px; }
+  .marca { grid-area: marca; display: flex; align-items: center; gap: 12px; font: 700 19px/1.1 var(--f-display); letter-spacing: .2px; margin: 0; white-space: nowrap; }
+  .marca a { display: inline-flex; line-height: 0; color: inherit; }
+  .marca svg { width: 132px; height: auto; display: block; }
+  /* the colour lockup on the light theme, the white one on the dark theme */
+  .logo-oscuro { display: none; }
+  :root[data-tema="oscuro"] .logo-oscuro { display: block; }
+  :root[data-tema="oscuro"] .logo-claro { display: none; }
   .marca em { font-style: normal; color: var(--naranja); }
-  .lentes { justify-self: center; display: inline-flex; padding: 4px; border-radius: 999px; background: rgba(255, 255, 255, .06); border: 1px solid var(--linea); }
-  .lentes button { border: 0; background: transparent; padding: 8px 16px; border-radius: 999px; cursor: pointer; font: 800 13px var(--f-sub); letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-2); }
-  .lentes button[aria-pressed="true"] { background: var(--tinta); color: var(--bg); }
-  .resumen { justify-self: end; display: grid; justify-items: end; gap: 6px; }
+  .lentes { grid-area: lentes; justify-self: center; display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; background: var(--sup); box-shadow: var(--neu-in); }
+  .lentes button { display: inline-flex; align-items: center; gap: 8px; border: 0; background: transparent; padding: 8px 16px; border-radius: 999px; cursor: pointer; font: 800 13px var(--f-sub); letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-3); transition: color .2s, background-color .2s, box-shadow .2s; }
+  .lentes button .fa { font-size: 12px; }
+  .lentes button[aria-pressed="true"] { background: var(--sup); color: var(--tinta); box-shadow: var(--neu-out-sm); }
+  .resumen { grid-area: resumen; justify-self: end; display: grid; justify-items: end; gap: 6px; }
   .total-real { margin: 0; font: 800 13px/1.2 var(--f-sub); color: var(--tinta-2); white-space: nowrap; }
-  .total-real b { font: 700 22px/1 var(--f-display); color: var(--naranja); margin-right: 5px; letter-spacing: -.2px; vertical-align: -2px; }
-  .total-real.es-chico b { font-size: 16px; }
-  .periodo { font: 700 12.5px var(--f-sub); color: var(--tinta-3); padding: 7px 12px; border: 1px solid var(--linea); border-radius: 999px; white-space: nowrap; }
+  .total-real b { font: 700 22px/1 var(--f-display); color: var(--naranja-texto); margin-right: 5px; letter-spacing: -.2px; vertical-align: -2px; }
+  .periodo { font: 700 12.5px var(--f-sub); color: var(--tinta-2); padding: 7px 12px; border-radius: 999px; white-space: nowrap; box-shadow: var(--neu-in-sm); }
+  /* theme switch: only a sun and a moon */
+  .tema { grid-area: tema; position: relative; width: 66px; height: 34px; border: 0; border-radius: 999px; padding: 0; cursor: pointer; background: var(--sup); box-shadow: var(--neu-in); }
+  .tema .fa { position: absolute; z-index: 1; top: 50%; font-size: 14px; transform: translateY(-50%); transition: color .3s, opacity .3s; }
+  .tema .sol { left: 10px; color: #c77800; }
+  .tema .luna { right: 10px; color: var(--tinta-3); }
+  .tema::after { content: ""; position: absolute; z-index: 0; top: 4px; left: 4px; width: 26px; height: 26px; border-radius: 50%; background: var(--sup); box-shadow: var(--neu-out-sm); transition: transform .3s cubic-bezier(.4, 1.4, .5, 1); }
+  .tema[aria-checked="true"]::after { transform: translateX(32px); }
+  .tema[aria-checked="true"] .luna { color: #ffd166; }
+  .tema[aria-checked="true"] .sol { color: var(--tinta-3); }
+  .tema:focus-visible, .lentes button:focus-visible, .chips button:focus-visible, .boton:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
 
-  .chips { position: relative; z-index: 3; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; padding: 8px 28px 4px; }
-  .chips button { border: 1px solid var(--linea); background: rgba(255, 255, 255, .04); padding: 7px 14px; border-radius: 999px; cursor: pointer; font: 700 13.5px var(--f-sub); color: var(--tinta); white-space: nowrap; }
-  .chips button:hover { border-color: rgba(255, 255, 255, .35); }
-  .chips button[aria-pressed="true"] { background: var(--tinta); color: var(--bg); border-color: var(--tinta); }
+  /* indicator chips bento */
+  .filtros { position: relative; z-index: 5; padding: 12px; }
+  .chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; padding: 2px; }
+  .chips button { display: inline-flex; align-items: center; gap: 8px; border: 0; background: var(--sup); padding: 8px 15px; border-radius: 999px; cursor: pointer; font: 700 13.5px var(--f-sub); color: var(--tinta); white-space: nowrap; box-shadow: var(--neu-out-sm); transition: box-shadow .2s, background-color .2s, color .2s; }
+  .chips button:hover { color: var(--acento-texto); }
+  .chips button[aria-pressed="true"] { background: var(--primario); color: var(--primario-tinta); box-shadow: var(--neu-in-sm); }
+  .chips .menu-boton { color: var(--naranja-texto); }
+  .chips .menu-boton .fa { font-size: 11px; transition: transform .2s; }
+  .chips .menu-boton[aria-expanded="true"] .fa { transform: rotate(180deg); }
+  .chips .menu-boton[aria-pressed="true"] { background: var(--naranja); color: #ffffff; }
+  .menu-panel { position: absolute; left: 50%; top: calc(100% + 10px); transform: translateX(-50%); width: min(880px, calc(100vw - 32px)); max-height: min(70vh, 560px); overflow: auto; padding: 18px 20px 20px; border-radius: 24px; background: var(--sup); box-shadow: var(--neu-out), 0 24px 50px rgba(21, 31, 71, .18); display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px 22px; }
+  .menu-panel[hidden] { display: none; }
+  .menu-panel h3 { margin: 0 0 8px; font: 900 11px var(--f-sub); letter-spacing: .14em; text-transform: uppercase; color: var(--naranja-texto); }
+  .menu-panel ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .menu-panel button { width: 100%; text-align: left; border: 0; background: transparent; padding: 7px 10px; border-radius: 12px; cursor: pointer; font: 700 14px var(--f-sub); color: var(--tinta); }
+  .menu-panel button:hover { box-shadow: var(--neu-out-sm); }
+  .menu-panel button[aria-pressed="true"] { box-shadow: var(--neu-in-sm); color: var(--acento-texto); }
+  .menu-panel button small { display: block; font: 500 12px var(--f-body); color: var(--tinta-3); margin-top: 1px; }
 
-  .escena { position: relative; margin: 6px 0 0; }
+  /* the stage inside the OFFICIAL glass frame: clear glass without blur (white veil .3), a 1 px edge, radius 40 and a
+     16 px ring (12 px at ≤767), so the moving blobs show through the ring */
+  .vidrio { position: relative; isolation: isolate; padding: 16px; border-radius: 40px; filter: drop-shadow(0 1px 8px rgba(15, 23, 42, .22)); }
+  .vidrio::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; background: radial-gradient(120% 140% at 100% 0%, var(--vidrio-brillo), rgba(255, 255, 255, 0) 40%), var(--vidrio-velo); box-shadow: inset 0 -14px 18px -14px rgba(15, 23, 42, .18); backdrop-filter: none; }
+  .vidrio::before { content: ""; position: absolute; inset: 0; z-index: 0; border-radius: inherit; padding: 1px; background: linear-gradient(to bottom left, var(--vidrio-canto-a), var(--vidrio-canto-b) 50%, var(--vidrio-canto-c)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); pointer-events: none; }
+  .escena { position: relative; z-index: 1; border-radius: 24px; overflow: hidden; }
   .escena canvas { display: block; width: 100%; touch-action: manipulation; cursor: default; }
   .rotulos { position: absolute; inset: 0; pointer-events: none; }
-  .grupo { position: absolute; left: 0; top: 0; transform: translate(-50%, 0); text-align: center; pointer-events: auto; cursor: pointer; border: 0; background: none; padding: 0; transition: opacity .35s; max-width: 240px; }
+  .grupo { position: absolute; left: 0; top: 0; transform: translate(-50%, 0); text-align: center; pointer-events: auto; cursor: pointer; border: 0; background: none; padding: 0; transition: opacity .35s; max-width: 240px; color: var(--escena-tinta); }
   .grupo b { display: block; font: 700 clamp(30px, 4.2vw, 58px)/1 var(--f-display); letter-spacing: -.5px; }
-  .grupo span { display: block; font: 800 14px/1.2 var(--f-sub); margin-top: 6px; color: var(--tinta); }
-  .grupo small { display: block; font: 500 11.5px/1.3 ui-monospace, Consolas, monospace; color: var(--tinta-3); margin-top: 3px; }
+  .grupo span { display: block; font: 800 14px/1.2 var(--f-sub); margin-top: 6px; }
+  .grupo small { display: block; font: 500 11.5px/1.3 ui-monospace, Consolas, monospace; color: var(--escena-tinta-3); margin-top: 3px; }
   .grupo.es-chico b { font-size: clamp(24px, 3vw, 40px); }
-  /* Intro: first the counter of real visits, then the question, then the 100 walk in. */
-  .intro { position: absolute; inset: 0; pointer-events: none; transition: opacity .8s; }
+  .intro { position: absolute; inset: 0; pointer-events: none; transition: opacity .8s; color: var(--escena-tinta); }
   .intro > * { position: absolute; left: 0; right: 0; top: clamp(34px, 10%, 100px); margin: 0; text-align: center; padding: 0 16px; transition: opacity .7s, transform .7s; }
-  .intro-cuenta b { display: block; font: 700 clamp(56px, 11vw, 150px)/1 var(--f-display); letter-spacing: -1px; color: #ffffff; text-shadow: 0 6px 40px rgba(0, 0, 0, .6); font-variant-numeric: tabular-nums; }
-  .intro-cuenta span { display: block; margin-top: 10px; font: 800 clamp(17px, 2.3vw, 26px)/1.2 var(--f-sub); color: var(--naranja); }
-  .intro-cuenta small { display: block; margin-top: 6px; font: 500 clamp(13px, 1.4vw, 16px)/1.4 var(--f-body); color: var(--tinta-2); }
-  .intro-pregunta { opacity: 0; transform: translateY(14px); font: 700 clamp(34px, 7vw, 92px)/1 var(--f-display); text-shadow: 0 6px 40px rgba(0, 0, 0, .6); }
+  .intro-cuenta b { display: block; font: 700 clamp(56px, 11vw, 150px)/1 var(--f-display); letter-spacing: -1px; font-variant-numeric: tabular-nums; text-shadow: 0 6px 40px var(--escena-sombra); }
+  .intro-cuenta span { display: block; margin-top: 10px; font: 800 clamp(17px, 2.3vw, 26px)/1.2 var(--f-sub); color: var(--naranja-texto); }
+  .intro-cuenta small { display: block; margin-top: 6px; font: 500 clamp(13px, 1.4vw, 16px)/1.4 var(--f-body); color: var(--escena-tinta-3); }
+  .intro-pregunta { opacity: 0; transform: translateY(14px); font: 700 clamp(34px, 7vw, 92px)/1 var(--f-display); text-shadow: 0 6px 40px var(--escena-sombra); }
   .intro-pregunta em { font-style: normal; color: var(--naranja); }
   .intro.es-fase2 .intro-cuenta { opacity: 0; transform: translateY(-14px); }
   .intro.es-fase2 .intro-pregunta { opacity: 1; transform: none; }
   .intro.es-oculta { opacity: 0; }
+  :root { --escena-tinta: #151f47; --escena-tinta-3: rgba(21, 31, 71, .7); --escena-sombra: rgba(255, 255, 255, .7); }
+  :root[data-tema="oscuro"] { --escena-tinta: #e9ecf6; --escena-tinta-3: rgba(233, 236, 246, .62); --escena-sombra: rgba(0, 0, 0, .6); }
 
-  /* «Todos los indicadores» menu */
-  .filtros { position: relative; z-index: 5; }
-  .menu-boton { display: inline-flex; align-items: center; gap: 8px; }
-  .menu-boton::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
-  .menu-boton[aria-expanded="true"]::after { transform: translateY(2px) rotate(-135deg); }
-  .chips .menu-boton { border-color: rgba(240, 121, 74, .55); color: var(--naranja-suave); }
-  .chips .menu-boton[aria-pressed="true"] { background: var(--naranja); border-color: var(--naranja); color: #0b0f24; }
-  .menu-panel { position: absolute; left: 50%; top: calc(100% + 6px); transform: translateX(-50%); width: min(860px, calc(100vw - 32px)); max-height: min(70vh, 560px); overflow: auto; padding: 18px 20px 20px; border-radius: 18px; background: rgba(10, 14, 36, .98); border: 1px solid rgba(255, 255, 255, .16); box-shadow: 0 22px 50px rgba(0, 0, 0, .55); display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px 22px; }
-  .menu-panel[hidden] { display: none; }
-  .menu-panel h3 { margin: 0 0 8px; font: 900 11px var(--f-sub); letter-spacing: .14em; text-transform: uppercase; color: var(--naranja-suave); }
-  .menu-panel ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
-  .menu-panel button { width: 100%; text-align: left; border: 0; background: transparent; padding: 7px 10px; border-radius: 9px; cursor: pointer; font: 700 14px var(--f-sub); color: var(--tinta); }
-  .menu-panel button:hover { background: rgba(255, 255, 255, .07); }
-  .menu-panel button[aria-pressed="true"] { background: var(--tinta); color: var(--bg); }
-  .menu-panel button small { display: block; font: 500 12px var(--f-body); color: var(--tinta-3); margin-top: 1px; }
-  .menu-panel button[aria-pressed="true"] small { color: rgba(7, 11, 28, .7); }
-
-  .ficha { position: absolute; z-index: 4; pointer-events: none; min-width: 200px; max-width: 260px; padding: 11px 13px; border-radius: 12px; background: rgba(9, 13, 34, .96); border: 1px solid rgba(255, 255, 255, .16); box-shadow: 0 14px 34px rgba(0, 0, 0, .5); font-size: 13px; line-height: 1.45; opacity: 0; transform: translate(-50%, calc(-100% - 14px)); transition: opacity .12s; }
+  .ficha { position: absolute; z-index: 4; pointer-events: none; min-width: 200px; max-width: 260px; padding: 11px 13px; border-radius: 16px; background: var(--ficha); border: 1px solid var(--ficha-borde); box-shadow: 0 14px 34px rgba(15, 23, 42, .28); font-size: 13px; line-height: 1.45; color: var(--tinta); opacity: 0; transform: translate(-50%, calc(-100% - 14px)); transition: opacity .12s; }
   .ficha.es-visible { opacity: 1; }
-  .ficha strong { display: block; font: 900 12px var(--f-sub); letter-spacing: .1em; text-transform: uppercase; color: var(--naranja-suave); margin-bottom: 4px; }
+  .ficha strong { display: block; font: 900 12px var(--f-sub); letter-spacing: .1em; text-transform: uppercase; color: var(--naranja-texto); margin-bottom: 4px; }
   .ficha ul { margin: 0; padding: 0; list-style: none; }
-  .ficha-fue { display: inline-block; margin: 0 6px 6px 0; padding: 2px 8px; border-radius: 999px; font: 700 11.5px var(--f-sub); font-style: normal; color: var(--tinta); background: rgba(255, 255, 255, .09); }
   .ficha li { display: flex; gap: 8px; }
   .ficha li i { flex: 0 0 8px; height: 8px; margin-top: 6px; border-radius: 2px; }
+  .ficha-fue { display: inline-block; margin: 0 6px 6px 0; padding: 2px 8px; border-radius: 999px; font: 700 11.5px var(--f-sub); font-style: normal; box-shadow: var(--neu-in-sm); }
 
-  .pie-escena { position: relative; z-index: 3; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 28px; align-items: end; padding: 22px 28px 22px; }
-  .frase { margin: 0; font: 700 clamp(22px, 3.2vw, 38px)/1.15 var(--f-display); letter-spacing: -.2px; max-width: 980px; }
+  /* sentence + actions bento row */
+  .fila { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; }
+  .frase-caja { padding: 22px 26px; }
+  .frase { margin: 0; font: 700 clamp(22px, 3vw, 36px)/1.15 var(--f-display); letter-spacing: -.2px; max-width: 980px; }
   .frase b { font-weight: 700; }
   .frase-sub { margin: 10px 0 0; font: 500 15px/1.5 var(--f-body); color: var(--tinta-2); max-width: 920px; }
-  .frase-sub code { font: 700 14px ui-monospace, Consolas, monospace; color: #ffffff; }
-  .frase-sub .cifra { font-weight: 700; color: var(--naranja); }
-  .acciones { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-  .acciones button { border: 1px solid var(--linea); background: rgba(255, 255, 255, .05); padding: 9px 15px; border-radius: 999px; cursor: pointer; font: 800 13px var(--f-sub); color: var(--tinta); white-space: nowrap; }
-  .acciones button:hover { border-color: rgba(255, 255, 255, .4); }
+  .frase-sub code { font: 700 14px ui-monospace, Consolas, monospace; color: var(--tinta); }
+  .frase-sub .cifra { font-weight: 700; color: var(--naranja-texto); }
+  .acciones { padding: 22px; display: grid; gap: 14px; align-content: center; min-width: 250px; }
+  .boton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 999px; padding: 13px 22px; cursor: pointer; font: 800 14.5px var(--f-sub); text-decoration: none; white-space: nowrap; transition: box-shadow .2s, background-color .2s, color .2s, transform .1s; }
+  .boton:active { transform: translateY(1px); }
+  .boton-primario { background: var(--primario); color: var(--primario-tinta); box-shadow: var(--neu-out); }
+  .boton-primario:hover { background: var(--primario-hover); }
+  .boton-secundario { background: var(--sup); color: var(--tinta); box-shadow: var(--neu-out-sm); }
+  .boton-secundario:hover { color: var(--acento-texto); }
+  .boton-secundario:active, .boton-secundario.es-listo { box-shadow: var(--neu-in-sm); }
+  /* empty, it takes no room but stays in the page so screen readers announce the message when it appears */
+  .aviso:empty { min-height: 0; height: 0; margin-top: -14px; }
+  .aviso { margin: 0; min-height: 1.2em; font: 700 12.5px var(--f-sub); color: var(--tinta-3); text-align: center; }
 
-  .tabla { margin: 0 28px 8px; border-top: 1px solid var(--linea); }
-  .tabla summary { cursor: pointer; padding: 12px 0; font: 800 13.5px var(--f-sub); color: var(--tinta-2); list-style: none; }
-  .tabla summary::before { content: "+ "; color: var(--naranja); }
-  .tabla[open] summary::before { content: "– "; }
-  .tabla table { width: 100%; max-width: 760px; border-collapse: collapse; margin: 0 0 16px; font-size: 14px; }
-  .tabla th, .tabla td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--linea); }
+  /* figures table (data: sunken) */
+  .tabla { padding: 6px 22px; }
+  .tabla summary { display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 12px 0; font: 800 13.5px var(--f-sub); color: var(--tinta-2); list-style: none; }
+  .tabla summary::-webkit-details-marker { display: none; }
+  .tabla summary .fa { color: var(--naranja-texto); }
+  .tabla-caja { margin: 0 0 16px; padding: 6px 12px; border-radius: 18px; box-shadow: var(--neu-in); overflow-x: auto; }
+  .tabla table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .tabla th, .tabla td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(127, 137, 170, .22); }
+  .tabla tr:last-child td { border-bottom: 0; }
   .tabla th { font: 900 11px var(--f-sub); letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-3); }
   .tabla td:nth-child(n+2), .tabla th:nth-child(n+2) { text-align: right; }
-  .tabla td:nth-child(n+2) { white-space: nowrap; }
+  .tabla td:nth-child(n+2) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  /* short headers on narrow screens, so the four columns (with the real counts) fit without scrolling */
+  .tabla .corta { display: none; }
 
-  dialog { width: min(760px, calc(100vw - 32px)); max-height: calc(100vh - 48px); border: 1px solid rgba(255, 255, 255, .16); border-radius: 18px; background: #0b1130; color: var(--tinta); padding: 0; }
-  dialog::backdrop { background: rgba(3, 5, 14, .7); }
+  /* footer bento with «Cómo se hizo» */
+  .creditos { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px 24px; align-items: center; padding: 18px 22px; font-size: 12.5px; color: var(--tinta-2); }
+  .creditos p { margin: 0; max-width: 980px; }
+
+  dialog { width: min(760px, calc(100vw - 32px)); max-height: calc(100vh - 48px); border: 0; border-radius: 28px; background: var(--sup); color: var(--tinta); padding: 0; box-shadow: var(--neu-out), 0 30px 60px rgba(15, 23, 42, .3); }
+  dialog::backdrop { background: rgba(11, 16, 34, .45); }
   .dlg { padding: 24px 26px 26px; overflow: auto; max-height: calc(100vh - 50px); }
   .dlg h2 { font: 700 24px/1.15 var(--f-display); margin: 0 0 14px; }
-  .dlg h3 { font: 900 13px var(--f-sub); letter-spacing: .1em; text-transform: uppercase; color: var(--naranja-suave); margin: 18px 0 6px; }
+  .dlg h3 { font: 900 13px var(--f-sub); letter-spacing: .1em; text-transform: uppercase; color: var(--naranja-texto); margin: 18px 0 6px; }
   .dlg p, .dlg li { color: var(--tinta-2); font-size: 14.5px; }
   .dlg ul { padding-left: 20px; }
-  .dlg .cerrar { position: sticky; top: 0; float: right; border: 1px solid var(--linea); background: #0b1130; border-radius: 999px; width: 36px; height: 36px; cursor: pointer; font-size: 18px; line-height: 1; }
-  .creditos { padding: 16px 28px 30px; font-size: 12.5px; color: var(--tinta-3); border-top: 1px solid var(--linea); }
-  .creditos p { margin: 0 0 6px; max-width: 980px; }
+  .dlg .cerrar { position: sticky; top: 0; float: right; border: 0; background: var(--sup); border-radius: 999px; width: 38px; height: 38px; cursor: pointer; font-size: 15px; line-height: 1; box-shadow: var(--neu-out-sm); }
 
+  @media (max-width: 1100px) { .cab { grid-template-columns: auto 1fr auto; grid-template-areas: "marca resumen tema" "lentes lentes lentes"; } .lentes { justify-self: start; } }
   @media (max-width: 820px) {
-    .cab { grid-template-columns: 1fr auto; padding: 14px 16px 6px; }
-    .lentes { grid-column: 1 / -1; grid-row: 2; justify-self: start; }
-    .resumen { grid-row: 1; grid-column: 2; }
-    .chips { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding: 8px 16px 6px; scrollbar-width: none; }
+    .pagina { padding: 12px 16px 22px; gap: 14px; }
+    .cab { padding: 12px 14px; }
+    .chips { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding: 6px 4px 8px; scrollbar-width: none; }
     .chips::-webkit-scrollbar { display: none; }
-    .pie-escena { grid-template-columns: minmax(0, 1fr); padding: 14px 16px 18px; }
-    .acciones { justify-content: flex-start; }
-    .tabla { margin: 0 16px 8px; }
-    .creditos { padding: 14px 16px 26px; }
+    .fila { grid-template-columns: minmax(0, 1fr); }
+    .acciones { min-width: 0; grid-template-columns: 1fr 1fr; padding: 16px; }
+    .aviso { grid-column: 1 / -1; }
+    .frase-caja { padding: 18px; }
+    .tabla { padding: 4px 16px; }
+    .creditos { grid-template-columns: minmax(0, 1fr); padding: 16px; }
   }
-  /* The logo lockup is wider than the web's text mark: at 430 px the header ran 9 px past the screen (qa, 2026-11-11). */
-  @media (max-width: 480px) { .marca { font-size: 15.5px; gap: 8px; } .marca svg { width: 104px; } }
-  @media (max-width: 420px) { .cab { column-gap: 10px; } .tabla table { font-size: 13px; } .tabla th, .tabla td { padding: 6px 6px; } .tabla th:nth-child(n+2), .tabla td:nth-child(n+2) { white-space: normal; } .marca { font-size: 15.5px; gap: 8px; } .marca svg { width: 104px; } .periodo { font-size: 11px; padding: 6px 9px; } .total-real { font-size: 11.5px; } .total-real b { font-size: 18px; } .grupo span { font-size: 12.5px; } }
-  @media (max-width: 374px) { .cab { grid-template-columns: minmax(0, 1fr); } .resumen { grid-row: 2; grid-column: 1; justify-self: start; justify-items: start; } .lentes { grid-row: 3; } }
+  @media (max-width: 767px) { .vidrio { padding: 12px; } }
+  @media (max-width: 560px) {
+    .cab { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "marca tema" "lentes lentes" "resumen resumen"; }
+    .resumen { justify-self: start; justify-items: start; grid-auto-flow: column; align-items: center; gap: 10px; }
+    .acciones { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 480px) { .marca { font-size: 15.5px; gap: 8px; } .marca svg { width: 104px; } .lentes { width: 100%; } .lentes button { flex: 1; justify-content: center; padding: 8px 8px; letter-spacing: .03em; } }
+  @media (max-width: 480px) { .tabla .larga { display: none; } .tabla .corta { display: inline; } .tabla th { letter-spacing: .06em; } .tabla-caja { padding: 4px 8px; } }
+  @media (max-width: 420px) { .tabla table { font-size: 13px; } .tabla th, .tabla td { padding: 6px 4px; } .tabla th:nth-child(n+2) { white-space: normal; } .periodo { font-size: 11px; padding: 6px 9px; } .total-real { font-size: 11.5px; } .total-real b { font-size: 18px; } .grupo span { font-size: 12.5px; } .resumen { grid-auto-flow: row; } }
 </style>
 </head>
 <body>
-<header class="cab">
-  <p class="marca"><a href="https://plus.actuaria.com/auth/login" target="_blank" rel="noopener" aria-label="actuaria+ (abre el ingreso en una pestaña nueva)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.2 31.06" fill="none" role="img" aria-hidden="true" focusable="false"><g id="isotipo-plus"><path d="M30.9438 17.4188L25.6252 15.4195C25.5782 10.8486 22.4255 6.83722 17.9699 5.73079L17.4188 0.113213L15.4196 5.43176C10.8486 5.47875 6.83729 8.63143 5.73086 13.087L0.113281 13.6381L5.43183 15.6374C5.47882 20.2083 8.6315 24.2197 13.0871 25.3261L13.6382 30.9437L15.6375 25.6251C20.2084 25.5781 24.2197 22.4255 25.3262 17.9699L30.9438 17.4188ZM13.9116 28.0003C7.0338 27.1075 2.16808 20.785 3.06091 13.9073C3.95374 7.02946 10.2762 2.16374 17.154 3.05657C24.0318 3.9494 28.8975 10.2718 28.0047 17.1496C27.1118 24.0274 20.7894 28.8932 13.9116 28.0003ZM14.6506 22.293C10.9212 21.8103 8.2812 18.38 8.76393 14.6506C9.24665 10.9212 12.677 8.28113 16.4064 8.76386C20.1358 9.24658 22.7758 12.6769 22.2931 16.4063C21.8104 20.1357 18.38 22.7758 14.6506 22.293Z" fill="white" stroke="white" stroke-width="0.226412" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.9017 16.2216C14.4403 15.8115 14.4019 15.1066 14.8077 14.6452L13.7354 13.6883L27.3671 2.25238L13.5987 13.8037L3.69214 28.7981L17.4606 17.2468L17.5588 17.0973L16.478 16.1361C16.0636 16.5932 15.363 16.6317 14.9017 16.2216Z" fill="#385CAD" stroke="#385CAD" stroke-width="0.226412" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.7361 13.6883L14.8083 14.6452C14.8083 14.6452 14.8083 14.641 14.8126 14.6367C15.2227 14.1753 15.9319 14.1326 16.3975 14.547C16.8589 14.9571 16.9016 15.6662 16.4872 16.1319C16.4872 16.1319 16.4829 16.1319 16.4787 16.1361L17.5595 17.0973L27.3678 2.25238L13.7361 13.6883Z" fill="#E0592A" stroke="#E0592A" stroke-width="0.226412" stroke-linecap="round" stroke-linejoin="round"/></g><g id="wordmark-actuaria" fill="white"><path d="M35.933 13.3437C36.4215 13.0451 36.9373 12.7737 37.5073 12.5837C38.0502 12.3937 38.593 12.2308 39.1631 12.0951C39.7059 11.9594 40.2488 11.8779 40.7917 11.8236C41.3074 11.7965 41.8231 11.7694 42.2846 11.7694C44.2118 11.7694 45.6775 12.2308 46.6819 13.1537C47.6862 14.1037 48.1748 15.3795 48.1748 17.0352V25.6126H43.8318V24.5269C43.2346 24.9883 42.556 25.3412 41.796 25.5583C41.0088 25.7755 40.1945 25.8841 39.3531 25.8841C38.0773 25.8841 37.073 25.5312 36.2858 24.8526C35.4987 24.174 35.1187 23.2783 35.1187 22.1382C35.1187 21.2425 35.3358 20.5368 35.743 20.021C36.1501 19.5053 36.693 19.071 37.3173 18.7724C37.9416 18.4738 38.6202 18.2567 39.3531 18.121C40.0859 17.9853 40.7917 17.8495 41.4431 17.741C42.0674 17.6324 42.6103 17.4967 43.0717 17.3609C43.5332 17.2252 43.7775 16.9809 43.8046 16.6552C43.8318 16.4109 43.6689 16.1666 43.2618 15.9223C42.8546 15.7052 42.2574 15.5966 41.416 15.5966C40.7917 15.5966 40.0859 15.678 39.3259 15.868C38.5388 16.0581 37.643 16.4652 36.6387 17.0352L35.933 13.3437ZM39.5974 21.9482C39.5974 22.464 39.9502 22.7083 40.6831 22.7083C41.036 22.7083 41.416 22.654 41.7689 22.5725C42.1217 22.4911 42.4203 22.3554 42.7189 22.1925C43.0175 22.0568 43.2618 21.8939 43.4518 21.7039C43.6418 21.5139 43.7775 21.3511 43.8318 21.1611V19.7767C43.3432 19.9396 42.8546 20.0753 42.3389 20.1839C41.8231 20.3196 41.3888 20.4282 40.9817 20.5639C40.5745 20.6996 40.2217 20.8896 39.9774 21.0796C39.7331 21.2968 39.5974 21.5954 39.5974 21.9482Z"/><path d="M55.0928 18.8267C55.0928 19.8853 55.3642 20.6996 55.9071 21.2968C56.4228 21.8939 57.1014 22.1925 57.9157 22.1925C58.54 22.1925 59.1101 22.0568 59.6801 21.8125C60.2229 21.5682 60.6572 21.2154 60.9558 20.7811L63.5888 23.5226C62.9102 24.2826 62.0959 24.8526 61.1187 25.2598C60.1415 25.6669 59.0558 25.8841 57.8343 25.8841C56.7486 25.8841 55.7714 25.7212 54.8756 25.3683C53.9799 25.0155 53.2199 24.554 52.5956 23.9297C51.9713 23.3054 51.4827 22.5725 51.1298 21.7039C50.7769 20.8353 50.6141 19.8853 50.6141 18.8267C50.6141 17.7681 50.7769 16.8181 51.1298 15.9495C51.4827 15.0809 51.9713 14.348 52.5956 13.7237C53.2199 13.0994 53.9799 12.6379 54.8756 12.2851C55.7714 11.9322 56.7486 11.7694 57.8343 11.7694C59.0558 11.7694 60.1415 11.9594 61.1187 12.3665C62.0959 12.7737 62.9102 13.3708 63.5888 14.1309L60.9558 16.8724C60.6572 16.4381 60.2229 16.0852 59.6801 15.8409C59.1101 15.5966 58.54 15.4609 57.9157 15.4609C57.1014 15.4609 56.4228 15.7595 55.9071 16.3566C55.3642 16.9538 55.0928 17.7681 55.0928 18.8267Z"/><path d="M74.9378 25.6126C74.5306 25.6941 74.0963 25.7755 73.6349 25.8026C73.1734 25.8569 72.712 25.8841 72.2506 25.8841C70.5948 25.8841 69.319 25.4226 68.3962 24.4997C67.4733 23.5768 67.0118 22.1382 67.0118 20.1567V15.4609H64.8675V12.0408H67.0118V7.96924H71.3548V12.0408H74.3135V15.4609H71.3548V19.8039C71.3548 20.0753 71.382 20.3468 71.4091 20.591C71.4362 20.8625 71.5177 21.1068 71.6263 21.2968C71.7348 21.5139 71.8977 21.6768 72.0877 21.8125C72.2777 21.9482 72.5491 22.0025 72.8749 22.0025C73.092 22.0025 73.3363 22.0025 73.6349 21.9754C73.9063 21.9482 74.2049 21.9211 74.5035 21.8668L74.9378 25.6126Z"/><path d="M86.336 25.6126V24.0654C85.8203 24.6355 85.196 25.0969 84.5174 25.3955C83.8116 25.7212 83.0516 25.8841 82.2373 25.8841C80.5273 25.8841 79.2244 25.3683 78.3829 24.3369C77.5143 23.3054 77.08 21.7854 77.08 19.8039V12.0408H81.4773V19.451C81.4773 20.3196 81.6673 20.9711 82.0202 21.4054C82.373 21.8668 82.8616 22.0839 83.5131 22.0839C84.2459 22.0839 84.8702 21.8397 85.3588 21.3239C85.8474 20.8353 86.1731 20.1839 86.336 19.3967V12.0408H90.7333V25.6126H86.336Z"/><path d="M94.4085 13.3437C94.8971 13.0451 95.4128 12.7737 95.9828 12.5837C96.5257 12.3937 97.0686 12.2308 97.6386 12.0951C98.1815 11.9594 98.7243 11.8779 99.2672 11.8236C99.7829 11.7965 100.299 11.7694 100.76 11.7694C102.687 11.7694 104.153 12.2308 105.157 13.1537C106.162 14.1037 106.65 15.3795 106.65 17.0352V25.6126H102.307V24.5269C101.71 24.9883 101.032 25.3412 100.272 25.5583C99.4844 25.7755 98.67 25.8841 97.8286 25.8841C96.5528 25.8841 95.5485 25.5312 94.7614 24.8526C93.9742 24.174 93.5942 23.2783 93.5942 22.1382C93.5942 21.2425 93.8113 20.5368 94.2185 20.021C94.6256 19.5053 95.1685 19.071 95.7928 18.7724C96.4171 18.4738 97.0957 18.2567 97.8286 18.121C98.5615 17.9853 99.2672 17.8495 99.9187 17.741C100.543 17.6324 101.086 17.4967 101.547 17.3609C102.009 17.2252 102.253 16.9809 102.28 16.6552C102.307 16.4109 102.144 16.1666 101.737 15.9223C101.33 15.7052 100.733 15.5966 99.8915 15.5966C99.2672 15.5966 98.5615 15.678 97.8015 15.868C97.0143 16.0581 96.1185 16.4652 95.1142 17.0352L94.4085 13.3437ZM98.0729 21.9482C98.0729 22.464 98.4258 22.7083 99.1586 22.7083C99.5115 22.7083 99.8915 22.654 100.244 22.5725C100.597 22.4911 100.896 22.3554 101.194 22.1925C101.493 22.0568 101.737 21.8939 101.927 21.7039C102.117 21.5139 102.253 21.3511 102.307 21.1611V19.7767C101.819 19.9396 101.33 20.0753 100.814 20.1839C100.299 20.3196 99.8644 20.4282 99.4572 20.5639C99.0501 20.6996 98.6972 20.8896 98.4529 21.0796C98.2086 21.2968 98.0729 21.5954 98.0729 21.9482Z"/><path d="M113.899 12.0408V13.8594C114.415 13.1808 115.039 12.6651 115.745 12.3122C116.423 11.9594 117.211 11.7694 118.052 11.7694V15.5695C117.645 15.5695 117.238 15.6509 116.804 15.7866C116.369 15.9495 115.962 16.1666 115.582 16.4652C115.175 16.7638 114.849 17.1167 114.551 17.551C114.252 17.9853 114.035 18.501 113.899 19.071V25.6126H109.502V12.0408H113.899Z"/><path d="M124.744 12.0408V25.6126H120.347V12.0408H124.744ZM120.075 7.72494C120.075 7.0735 120.319 6.53062 120.808 6.06918C121.269 5.60774 121.867 5.39059 122.545 5.39059C123.224 5.39059 123.821 5.60774 124.31 6.06918C124.771 6.53062 125.015 7.0735 125.015 7.72494C125.015 8.37639 124.771 8.91927 124.31 9.38071C123.821 9.84215 123.224 10.0593 122.545 10.0593C121.867 10.0593 121.269 9.84215 120.808 9.38071C120.319 8.91927 120.075 8.37639 120.075 7.72494Z"/><path d="M127.967 13.3437C128.456 13.0451 128.971 12.7737 129.541 12.5837C130.084 12.3937 130.627 12.2308 131.197 12.0951C131.74 11.9594 132.283 11.8779 132.826 11.8236C133.341 11.7965 133.857 11.7694 134.319 11.7694C136.246 11.7694 137.712 12.2308 138.716 13.1537C139.72 14.1037 140.209 15.3795 140.209 17.0352V25.6126H135.866V24.5269C135.269 24.9883 134.59 25.3412 133.83 25.5583C133.043 25.7755 132.229 25.8841 131.387 25.8841C130.111 25.8841 129.107 25.5312 128.32 24.8526C127.533 24.174 127.153 23.2783 127.153 22.1382C127.153 21.2425 127.37 20.5368 127.777 20.021C128.184 19.5053 128.727 19.071 129.351 18.7724C129.976 18.4738 130.654 18.2567 131.387 18.121C132.12 17.9853 132.826 17.8495 133.477 17.741C134.101 17.6324 134.644 17.4967 135.106 17.3609C135.567 17.2252 135.812 16.9809 135.839 16.6552C135.866 16.4109 135.703 16.1666 135.296 15.9223C134.889 15.7052 134.291 15.5966 133.45 15.5966C132.826 15.5966 132.12 15.678 131.36 15.868C130.573 16.0581 129.677 16.4652 128.673 17.0352L127.967 13.3437ZM131.631 21.9482C131.631 22.464 131.984 22.7083 132.717 22.7083C133.07 22.7083 133.45 22.654 133.803 22.5725C134.156 22.4911 134.454 22.3554 134.753 22.1925C135.051 22.0568 135.296 21.8939 135.486 21.7039C135.676 21.5139 135.812 21.3511 135.866 21.1611V19.7767C135.377 19.9396 134.889 20.0753 134.373 20.1839C133.857 20.3196 133.423 20.4282 133.016 20.5639C132.609 20.6996 132.256 20.8896 132.011 21.0796C131.767 21.2968 131.631 21.5954 131.631 21.9482Z"/></g><path id="plus" d="M153.94 11.7735C154.063 11.7735 154.162 11.8732 154.162 11.9962V16.0317C154.162 16.2777 154.362 16.4771 154.608 16.4771H158.891C159.014 16.4771 159.113 16.5768 159.113 16.6998V20.9889C159.113 21.1119 159.014 21.2116 158.891 21.2116H154.608C154.362 21.2116 154.162 21.411 154.162 21.657V25.6615C154.162 25.7845 154.063 25.8842 153.94 25.8842H149.589C149.466 25.8842 149.366 25.7845 149.366 25.6615V21.657C149.366 21.411 149.166 21.2116 148.92 21.2116H144.606C144.483 21.2116 144.384 21.1119 144.384 20.9889V16.6998C144.384 16.5768 144.483 16.4771 144.606 16.4771H148.92C149.166 16.4771 149.366 16.2777 149.366 16.0317V11.9962C149.366 11.8732 149.466 11.7735 149.589 11.7735H153.94Z" fill="white"/></svg></a><span><em>en</em> 100</span></p>
+<div class="pagina">
+<header class="bento cab">
+  <p class="marca"><a href="https://plus.actuaria.com/auth/login" target="_blank" rel="noopener" aria-label="actuaria+ (abre el ingreso en una pestaña nueva)"><span class="logo-claro"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159 31" fill="none"><path d="M30.8305 17.3056L25.5119 15.3063C25.4649 10.7353 22.3123 6.72401 17.8566 5.61758L17.3056 0L15.3063 5.31854C10.7353 5.36554 6.72401 8.51821 5.61758 12.9738L0 13.5249L5.31854 15.5242C5.36554 20.0951 8.51821 24.1065 12.9738 25.2129L13.5249 30.8305L15.5242 25.5119C20.0951 25.4649 24.1065 22.3123 25.2129 17.8566L30.8305 17.3056ZM13.7983 27.8871C6.92052 26.9943 2.0548 20.6718 2.94763 13.794C3.84046 6.91624 10.1629 2.05052 17.0407 2.94336C23.9185 3.83619 28.7842 10.1586 27.8914 17.0364C26.9986 23.9142 20.6761 28.7799 13.7983 27.8871ZM14.5374 22.1798C10.808 21.6971 8.16792 18.2667 8.65064 14.5374C9.13337 10.808 12.5637 8.16792 16.2931 8.65064C20.0225 9.13337 22.6626 12.5637 22.1798 16.2931C21.6971 20.0225 18.2667 22.6626 14.5374 22.1798Z" fill="#111C4E"/><path d="M14.7883 16.1084C14.3269 15.6983 14.2885 14.9934 14.6943 14.532L13.6221 13.5751L27.2538 2.13917L13.4854 13.6905L3.57877 28.6849L17.3472 17.1336L17.4454 16.9841L16.3646 16.0229C15.9503 16.48 15.2497 16.5185 14.7883 16.1084Z" fill="#385CAD"/><path d="M13.6221 13.5751L14.6943 14.532C14.6943 14.532 14.695 14.5277 14.6993 14.5235C15.1094 14.0621 15.8186 14.0194 16.2842 14.4338C16.7456 14.8439 16.7883 15.553 16.3739 16.0186C16.3739 16.0186 16.3689 16.0186 16.3646 16.0229L17.4454 16.9841L27.2538 2.13917L13.6221 13.5751Z" fill="#E0592A"/><path d="M35.8196 13.2304C36.3082 12.9319 36.824 12.6604 37.394 12.4704C37.9368 12.2804 38.4797 12.1176 39.0497 11.9818C39.5926 11.8461 40.1355 11.7647 40.6784 11.7104C41.1941 11.6833 41.7098 11.6561 42.1713 11.6561C44.0985 11.6561 45.5642 12.1176 46.5685 13.0404C47.5728 13.9905 48.0614 15.2662 48.0614 16.922V25.4994H43.7184V24.4136C43.1213 24.8751 42.4427 25.2279 41.6827 25.4451C40.8955 25.6622 40.0812 25.7708 39.2397 25.7708C37.964 25.7708 36.9597 25.418 36.1725 24.7394C35.3853 24.0608 35.0053 23.165 35.0053 22.025C35.0053 21.1293 35.2225 20.4235 35.6296 19.9078C36.0368 19.3921 36.5797 18.9578 37.204 18.6592C37.8283 18.3606 38.5069 18.1435 39.2397 18.0077C39.9726 17.872 40.6784 17.7363 41.3298 17.6277C41.9541 17.5191 42.497 17.3834 42.9584 17.2477C43.4199 17.112 43.6642 16.8677 43.6913 16.542C43.7184 16.2977 43.5556 16.0534 43.1484 15.8091C42.7413 15.5919 42.1441 15.4834 41.3027 15.4834C40.6784 15.4834 39.9726 15.5648 39.2126 15.7548C38.4254 15.9448 37.5297 16.352 36.5254 16.922L35.8196 13.2304ZM39.484 21.835C39.484 22.3507 39.8369 22.595 40.5698 22.595C40.9226 22.595 41.3027 22.5407 41.6555 22.4593C42.0084 22.3779 42.307 22.2421 42.6056 22.0793C42.9041 21.9436 43.1484 21.7807 43.3384 21.5907C43.5284 21.4007 43.6642 21.2378 43.7184 21.0478V19.6635C43.2299 19.8264 42.7413 19.9621 42.2255 20.0707C41.7098 20.2064 41.2755 20.3149 40.8684 20.4507C40.4612 20.5864 40.1083 20.7764 39.864 20.9664C39.6198 21.1835 39.484 21.4821 39.484 21.835Z" fill="#111C4E"/><path d="M54.9795 18.7135C54.9795 19.7721 55.2509 20.5864 55.7938 21.1835C56.3095 21.7807 56.9881 22.0793 57.8024 22.0793C58.4267 22.0793 58.9967 21.9436 59.5667 21.6993C60.1096 21.455 60.5439 21.1021 60.8425 20.6678L63.4754 23.4093C62.7968 24.1693 61.9825 24.7394 61.0054 25.1465C60.0282 25.5537 58.9424 25.7708 57.721 25.7708C56.6352 25.7708 55.6581 25.608 54.7623 25.2551C53.8666 24.9022 53.1066 24.4408 52.4822 23.8165C51.8579 23.1922 51.3694 22.4593 51.0165 21.5907C50.6636 20.7221 50.5008 19.7721 50.5008 18.7135C50.5008 17.6549 50.6636 16.7048 51.0165 15.8362C51.3694 14.9676 51.8579 14.2348 52.4822 13.6105C53.1066 12.9862 53.8666 12.5247 54.7623 12.1718C55.6581 11.819 56.6352 11.6561 57.721 11.6561C58.9424 11.6561 60.0282 11.8461 61.0054 12.2533C61.9825 12.6604 62.7968 13.2576 63.4754 14.0176L60.8425 16.7591C60.5439 16.3248 60.1096 15.972 59.5667 15.7277C58.9967 15.4834 58.4267 15.3477 57.8024 15.3477C56.9881 15.3477 56.3095 15.6462 55.7938 16.2434C55.2509 16.8406 54.9795 17.6549 54.9795 18.7135Z" fill="#111C4E"/><path d="M74.8245 25.4994C74.4173 25.5808 73.983 25.6622 73.5216 25.6894C73.0601 25.7437 72.5987 25.7708 72.1372 25.7708C70.4815 25.7708 69.2057 25.3094 68.2828 24.3865C67.3599 23.4636 66.8985 22.025 66.8985 20.0435V15.3477H64.7542V11.9275H66.8985V7.856H71.2415V11.9275H74.2001V15.3477H71.2415V19.6906C71.2415 19.9621 71.2686 20.2335 71.2958 20.4778C71.3229 20.7492 71.4044 20.9935 71.5129 21.1835C71.6215 21.4007 71.7844 21.5636 71.9744 21.6993C72.1644 21.835 72.4358 21.8893 72.7615 21.8893C72.9787 21.8893 73.223 21.8893 73.5216 21.8621C73.793 21.835 74.0916 21.8078 74.3902 21.7536L74.8245 25.4994Z" fill="#111C4E"/><path d="M86.2227 25.4994V23.9522C85.7069 24.5222 85.0826 24.9837 84.4041 25.2822C83.6983 25.608 82.9383 25.7708 82.124 25.7708C80.4139 25.7708 79.111 25.2551 78.2696 24.2236C77.401 23.1922 76.9667 21.6721 76.9667 19.6906V11.9275H81.364V19.3378C81.364 20.2064 81.554 20.8578 81.9068 21.2921C82.2597 21.7536 82.7483 21.9707 83.3997 21.9707C84.1326 21.9707 84.7569 21.7264 85.2455 21.2107C85.7341 20.7221 86.0598 20.0707 86.2227 19.2835V11.9275H90.62V25.4994H86.2227Z" fill="#111C4E"/><path d="M94.2952 13.2304C94.7837 12.9319 95.2995 12.6604 95.8695 12.4704C96.4124 12.2804 96.9552 12.1176 97.5253 11.9818C98.0681 11.8461 98.611 11.7647 99.1539 11.7104C99.6696 11.6833 100.185 11.6561 100.647 11.6561C102.574 11.6561 104.04 12.1176 105.044 13.0404C106.048 13.9905 106.537 15.2662 106.537 16.922V25.4994H102.194V24.4136C101.597 24.8751 100.918 25.2279 100.158 25.4451C99.371 25.6622 98.5567 25.7708 97.7153 25.7708C96.4395 25.7708 95.4352 25.418 94.648 24.7394C93.8609 24.0608 93.4809 23.165 93.4809 22.025C93.4809 21.1293 93.698 20.4235 94.1052 19.9078C94.5123 19.3921 95.0552 18.9578 95.6795 18.6592C96.3038 18.3606 96.9824 18.1435 97.7153 18.0077C98.4481 17.872 99.1539 17.7363 99.8053 17.6277C100.43 17.5191 100.973 17.3834 101.434 17.2477C101.895 17.112 102.14 16.8677 102.167 16.542C102.194 16.2977 102.031 16.0534 101.624 15.8091C101.217 15.5919 100.62 15.4834 99.7782 15.4834C99.1539 15.4834 98.4481 15.5648 97.6881 15.7548C96.901 15.9448 96.0052 16.352 95.0009 16.922L94.2952 13.2304ZM97.9596 21.835C97.9596 22.3507 98.3124 22.595 99.0453 22.595C99.3982 22.595 99.7782 22.5407 100.131 22.4593C100.484 22.3779 100.783 22.2421 101.081 22.0793C101.38 21.9436 101.624 21.7807 101.814 21.5907C102.004 21.4007 102.14 21.2378 102.194 21.0478V19.6635C101.705 19.8264 101.217 19.9621 100.701 20.0707C100.185 20.2064 99.751 20.3149 99.3439 20.4507C98.9367 20.5864 98.5839 20.7764 98.3396 20.9664C98.0953 21.1835 97.9596 21.4821 97.9596 21.835Z" fill="#111C4E"/><path d="M113.786 11.9275V13.7462C114.302 13.0676 114.926 12.5519 115.632 12.199C116.31 11.8461 117.097 11.6561 117.939 11.6561V15.4562C117.532 15.4562 117.124 15.5377 116.69 15.6734C116.256 15.8362 115.849 16.0534 115.469 16.352C115.062 16.6505 114.736 17.0034 114.437 17.4377C114.139 17.872 113.922 18.3877 113.786 18.9578V25.4994H109.389V11.9275H113.786Z" fill="#111C4E"/><path d="M124.631 11.9275V25.4994H120.233V11.9275H124.631ZM119.962 7.6117C119.962 6.96026 120.206 6.41738 120.695 5.95594C121.156 5.4945 121.753 5.27735 122.432 5.27735C123.111 5.27735 123.708 5.4945 124.196 5.95594C124.658 6.41738 124.902 6.96026 124.902 7.6117C124.902 8.26315 124.658 8.80603 124.196 9.26747C123.708 9.72891 123.111 9.94606 122.432 9.94606C121.753 9.94606 121.156 9.72891 120.695 9.26747C120.206 8.80603 119.962 8.26315 119.962 7.6117Z" fill="#E0592A"/><path d="M127.854 13.2304C128.342 12.9319 128.858 12.6604 129.428 12.4704C129.971 12.2804 130.514 12.1176 131.084 11.9818C131.627 11.8461 132.169 11.7647 132.712 11.7104C133.228 11.6833 133.744 11.6561 134.205 11.6561C136.132 11.6561 137.598 12.1176 138.603 13.0404C139.607 13.9905 140.095 15.2662 140.095 16.922V25.4994H135.752V24.4136C135.155 24.8751 134.477 25.2279 133.717 25.4451C132.93 25.6622 132.115 25.7708 131.274 25.7708C129.998 25.7708 128.994 25.418 128.207 24.7394C127.419 24.0608 127.039 23.165 127.039 22.025C127.039 21.1293 127.256 20.4235 127.664 19.9078C128.071 19.3921 128.614 18.9578 129.238 18.6592C129.862 18.3606 130.541 18.1435 131.274 18.0077C132.007 17.872 132.712 17.7363 133.364 17.6277C133.988 17.5191 134.531 17.3834 134.992 17.2477C135.454 17.112 135.698 16.8677 135.725 16.542C135.752 16.2977 135.59 16.0534 135.182 15.8091C134.775 15.5919 134.178 15.4834 133.337 15.4834C132.712 15.4834 132.007 15.5648 131.247 15.7548C130.459 15.9448 129.564 16.352 128.559 16.922L127.854 13.2304ZM131.518 21.835C131.518 22.3507 131.871 22.595 132.604 22.595C132.957 22.595 133.337 22.5407 133.69 22.4593C134.042 22.3779 134.341 22.2421 134.64 22.0793C134.938 21.9436 135.182 21.7807 135.372 21.5907C135.562 21.4007 135.698 21.2378 135.752 21.0478V19.6635C135.264 19.8264 134.775 19.9621 134.26 20.0707C133.744 20.2064 133.31 20.3149 132.902 20.4507C132.495 20.5864 132.142 20.7764 131.898 20.9664C131.654 21.1835 131.518 21.4821 131.518 21.835Z" fill="#E0592A"/><path d="M153.826 11.6603C153.949 11.6603 154.049 11.76 154.049 11.883V15.9185C154.049 16.1645 154.248 16.3638 154.494 16.3638H158.777C158.9 16.3638 159 16.4635 159 16.5865V20.8757C159 20.9987 158.9 21.0984 158.777 21.0984H154.494C154.248 21.0984 154.049 21.2978 154.049 21.5437V25.5483C154.049 25.6713 153.949 25.771 153.826 25.771H149.475C149.352 25.771 149.253 25.6713 149.253 25.5483V21.5437C149.253 21.2978 149.053 21.0984 148.807 21.0984H144.493C144.37 21.0984 144.27 20.9987 144.27 20.8757V16.5865C144.27 16.4635 144.37 16.3638 144.493 16.3638H148.807C149.053 16.3638 149.253 16.1645 149.253 15.9185V11.883C149.253 11.76 149.352 11.6603 149.475 11.6603H153.826Z" fill="#E0592A"/></svg></span><span class="logo-oscuro"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.2 31.06" fill="none" role="img" aria-hidden="true" focusable="false"><g id="isotipo-plus"><path d="M30.9438 17.4188L25.6252 15.4195C25.5782 10.8486 22.4255 6.83722 17.9699 5.73079L17.4188 0.113213L15.4196 5.43176C10.8486 5.47875 6.83729 8.63143 5.73086 13.087L0.113281 13.6381L5.43183 15.6374C5.47882 20.2083 8.6315 24.2197 13.0871 25.3261L13.6382 30.9437L15.6375 25.6251C20.2084 25.5781 24.2197 22.4255 25.3262 17.9699L30.9438 17.4188ZM13.9116 28.0003C7.0338 27.1075 2.16808 20.785 3.06091 13.9073C3.95374 7.02946 10.2762 2.16374 17.154 3.05657C24.0318 3.9494 28.8975 10.2718 28.0047 17.1496C27.1118 24.0274 20.7894 28.8932 13.9116 28.0003ZM14.6506 22.293C10.9212 21.8103 8.2812 18.38 8.76393 14.6506C9.24665 10.9212 12.677 8.28113 16.4064 8.76386C20.1358 9.24658 22.7758 12.6769 22.2931 16.4063C21.8104 20.1357 18.38 22.7758 14.6506 22.293Z" fill="white" stroke="white" stroke-width="0.226412" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.9017 16.2216C14.4403 15.8115 14.4019 15.1066 14.8077 14.6452L13.7354 13.6883L27.3671 2.25238L13.5987 13.8037L3.69214 28.7981L17.4606 17.2468L17.5588 17.0973L16.478 16.1361C16.0636 16.5932 15.363 16.6317 14.9017 16.2216Z" fill="#385CAD" stroke="#385CAD" stroke-width="0.226412" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.7361 13.6883L14.8083 14.6452C14.8083 14.6452 14.8083 14.641 14.8126 14.6367C15.2227 14.1753 15.9319 14.1326 16.3975 14.547C16.8589 14.9571 16.9016 15.6662 16.4872 16.1319C16.4872 16.1319 16.4829 16.1319 16.4787 16.1361L17.5595 17.0973L27.3678 2.25238L13.7361 13.6883Z" fill="#E0592A" stroke="#E0592A" stroke-width="0.226412" stroke-linecap="round" stroke-linejoin="round"/></g><g id="wordmark-actuaria" fill="white"><path d="M35.933 13.3437C36.4215 13.0451 36.9373 12.7737 37.5073 12.5837C38.0502 12.3937 38.593 12.2308 39.1631 12.0951C39.7059 11.9594 40.2488 11.8779 40.7917 11.8236C41.3074 11.7965 41.8231 11.7694 42.2846 11.7694C44.2118 11.7694 45.6775 12.2308 46.6819 13.1537C47.6862 14.1037 48.1748 15.3795 48.1748 17.0352V25.6126H43.8318V24.5269C43.2346 24.9883 42.556 25.3412 41.796 25.5583C41.0088 25.7755 40.1945 25.8841 39.3531 25.8841C38.0773 25.8841 37.073 25.5312 36.2858 24.8526C35.4987 24.174 35.1187 23.2783 35.1187 22.1382C35.1187 21.2425 35.3358 20.5368 35.743 20.021C36.1501 19.5053 36.693 19.071 37.3173 18.7724C37.9416 18.4738 38.6202 18.2567 39.3531 18.121C40.0859 17.9853 40.7917 17.8495 41.4431 17.741C42.0674 17.6324 42.6103 17.4967 43.0717 17.3609C43.5332 17.2252 43.7775 16.9809 43.8046 16.6552C43.8318 16.4109 43.6689 16.1666 43.2618 15.9223C42.8546 15.7052 42.2574 15.5966 41.416 15.5966C40.7917 15.5966 40.0859 15.678 39.3259 15.868C38.5388 16.0581 37.643 16.4652 36.6387 17.0352L35.933 13.3437ZM39.5974 21.9482C39.5974 22.464 39.9502 22.7083 40.6831 22.7083C41.036 22.7083 41.416 22.654 41.7689 22.5725C42.1217 22.4911 42.4203 22.3554 42.7189 22.1925C43.0175 22.0568 43.2618 21.8939 43.4518 21.7039C43.6418 21.5139 43.7775 21.3511 43.8318 21.1611V19.7767C43.3432 19.9396 42.8546 20.0753 42.3389 20.1839C41.8231 20.3196 41.3888 20.4282 40.9817 20.5639C40.5745 20.6996 40.2217 20.8896 39.9774 21.0796C39.7331 21.2968 39.5974 21.5954 39.5974 21.9482Z"/><path d="M55.0928 18.8267C55.0928 19.8853 55.3642 20.6996 55.9071 21.2968C56.4228 21.8939 57.1014 22.1925 57.9157 22.1925C58.54 22.1925 59.1101 22.0568 59.6801 21.8125C60.2229 21.5682 60.6572 21.2154 60.9558 20.7811L63.5888 23.5226C62.9102 24.2826 62.0959 24.8526 61.1187 25.2598C60.1415 25.6669 59.0558 25.8841 57.8343 25.8841C56.7486 25.8841 55.7714 25.7212 54.8756 25.3683C53.9799 25.0155 53.2199 24.554 52.5956 23.9297C51.9713 23.3054 51.4827 22.5725 51.1298 21.7039C50.7769 20.8353 50.6141 19.8853 50.6141 18.8267C50.6141 17.7681 50.7769 16.8181 51.1298 15.9495C51.4827 15.0809 51.9713 14.348 52.5956 13.7237C53.2199 13.0994 53.9799 12.6379 54.8756 12.2851C55.7714 11.9322 56.7486 11.7694 57.8343 11.7694C59.0558 11.7694 60.1415 11.9594 61.1187 12.3665C62.0959 12.7737 62.9102 13.3708 63.5888 14.1309L60.9558 16.8724C60.6572 16.4381 60.2229 16.0852 59.6801 15.8409C59.1101 15.5966 58.54 15.4609 57.9157 15.4609C57.1014 15.4609 56.4228 15.7595 55.9071 16.3566C55.3642 16.9538 55.0928 17.7681 55.0928 18.8267Z"/><path d="M74.9378 25.6126C74.5306 25.6941 74.0963 25.7755 73.6349 25.8026C73.1734 25.8569 72.712 25.8841 72.2506 25.8841C70.5948 25.8841 69.319 25.4226 68.3962 24.4997C67.4733 23.5768 67.0118 22.1382 67.0118 20.1567V15.4609H64.8675V12.0408H67.0118V7.96924H71.3548V12.0408H74.3135V15.4609H71.3548V19.8039C71.3548 20.0753 71.382 20.3468 71.4091 20.591C71.4362 20.8625 71.5177 21.1068 71.6263 21.2968C71.7348 21.5139 71.8977 21.6768 72.0877 21.8125C72.2777 21.9482 72.5491 22.0025 72.8749 22.0025C73.092 22.0025 73.3363 22.0025 73.6349 21.9754C73.9063 21.9482 74.2049 21.9211 74.5035 21.8668L74.9378 25.6126Z"/><path d="M86.336 25.6126V24.0654C85.8203 24.6355 85.196 25.0969 84.5174 25.3955C83.8116 25.7212 83.0516 25.8841 82.2373 25.8841C80.5273 25.8841 79.2244 25.3683 78.3829 24.3369C77.5143 23.3054 77.08 21.7854 77.08 19.8039V12.0408H81.4773V19.451C81.4773 20.3196 81.6673 20.9711 82.0202 21.4054C82.373 21.8668 82.8616 22.0839 83.5131 22.0839C84.2459 22.0839 84.8702 21.8397 85.3588 21.3239C85.8474 20.8353 86.1731 20.1839 86.336 19.3967V12.0408H90.7333V25.6126H86.336Z"/><path d="M94.4085 13.3437C94.8971 13.0451 95.4128 12.7737 95.9828 12.5837C96.5257 12.3937 97.0686 12.2308 97.6386 12.0951C98.1815 11.9594 98.7243 11.8779 99.2672 11.8236C99.7829 11.7965 100.299 11.7694 100.76 11.7694C102.687 11.7694 104.153 12.2308 105.157 13.1537C106.162 14.1037 106.65 15.3795 106.65 17.0352V25.6126H102.307V24.5269C101.71 24.9883 101.032 25.3412 100.272 25.5583C99.4844 25.7755 98.67 25.8841 97.8286 25.8841C96.5528 25.8841 95.5485 25.5312 94.7614 24.8526C93.9742 24.174 93.5942 23.2783 93.5942 22.1382C93.5942 21.2425 93.8113 20.5368 94.2185 20.021C94.6256 19.5053 95.1685 19.071 95.7928 18.7724C96.4171 18.4738 97.0957 18.2567 97.8286 18.121C98.5615 17.9853 99.2672 17.8495 99.9187 17.741C100.543 17.6324 101.086 17.4967 101.547 17.3609C102.009 17.2252 102.253 16.9809 102.28 16.6552C102.307 16.4109 102.144 16.1666 101.737 15.9223C101.33 15.7052 100.733 15.5966 99.8915 15.5966C99.2672 15.5966 98.5615 15.678 97.8015 15.868C97.0143 16.0581 96.1185 16.4652 95.1142 17.0352L94.4085 13.3437ZM98.0729 21.9482C98.0729 22.464 98.4258 22.7083 99.1586 22.7083C99.5115 22.7083 99.8915 22.654 100.244 22.5725C100.597 22.4911 100.896 22.3554 101.194 22.1925C101.493 22.0568 101.737 21.8939 101.927 21.7039C102.117 21.5139 102.253 21.3511 102.307 21.1611V19.7767C101.819 19.9396 101.33 20.0753 100.814 20.1839C100.299 20.3196 99.8644 20.4282 99.4572 20.5639C99.0501 20.6996 98.6972 20.8896 98.4529 21.0796C98.2086 21.2968 98.0729 21.5954 98.0729 21.9482Z"/><path d="M113.899 12.0408V13.8594C114.415 13.1808 115.039 12.6651 115.745 12.3122C116.423 11.9594 117.211 11.7694 118.052 11.7694V15.5695C117.645 15.5695 117.238 15.6509 116.804 15.7866C116.369 15.9495 115.962 16.1666 115.582 16.4652C115.175 16.7638 114.849 17.1167 114.551 17.551C114.252 17.9853 114.035 18.501 113.899 19.071V25.6126H109.502V12.0408H113.899Z"/><path d="M124.744 12.0408V25.6126H120.347V12.0408H124.744ZM120.075 7.72494C120.075 7.0735 120.319 6.53062 120.808 6.06918C121.269 5.60774 121.867 5.39059 122.545 5.39059C123.224 5.39059 123.821 5.60774 124.31 6.06918C124.771 6.53062 125.015 7.0735 125.015 7.72494C125.015 8.37639 124.771 8.91927 124.31 9.38071C123.821 9.84215 123.224 10.0593 122.545 10.0593C121.867 10.0593 121.269 9.84215 120.808 9.38071C120.319 8.91927 120.075 8.37639 120.075 7.72494Z"/><path d="M127.967 13.3437C128.456 13.0451 128.971 12.7737 129.541 12.5837C130.084 12.3937 130.627 12.2308 131.197 12.0951C131.74 11.9594 132.283 11.8779 132.826 11.8236C133.341 11.7965 133.857 11.7694 134.319 11.7694C136.246 11.7694 137.712 12.2308 138.716 13.1537C139.72 14.1037 140.209 15.3795 140.209 17.0352V25.6126H135.866V24.5269C135.269 24.9883 134.59 25.3412 133.83 25.5583C133.043 25.7755 132.229 25.8841 131.387 25.8841C130.111 25.8841 129.107 25.5312 128.32 24.8526C127.533 24.174 127.153 23.2783 127.153 22.1382C127.153 21.2425 127.37 20.5368 127.777 20.021C128.184 19.5053 128.727 19.071 129.351 18.7724C129.976 18.4738 130.654 18.2567 131.387 18.121C132.12 17.9853 132.826 17.8495 133.477 17.741C134.101 17.6324 134.644 17.4967 135.106 17.3609C135.567 17.2252 135.812 16.9809 135.839 16.6552C135.866 16.4109 135.703 16.1666 135.296 15.9223C134.889 15.7052 134.291 15.5966 133.45 15.5966C132.826 15.5966 132.12 15.678 131.36 15.868C130.573 16.0581 129.677 16.4652 128.673 17.0352L127.967 13.3437ZM131.631 21.9482C131.631 22.464 131.984 22.7083 132.717 22.7083C133.07 22.7083 133.45 22.654 133.803 22.5725C134.156 22.4911 134.454 22.3554 134.753 22.1925C135.051 22.0568 135.296 21.8939 135.486 21.7039C135.676 21.5139 135.812 21.3511 135.866 21.1611V19.7767C135.377 19.9396 134.889 20.0753 134.373 20.1839C133.857 20.3196 133.423 20.4282 133.016 20.5639C132.609 20.6996 132.256 20.8896 132.011 21.0796C131.767 21.2968 131.631 21.5954 131.631 21.9482Z"/></g><path id="plus" d="M153.94 11.7735C154.063 11.7735 154.162 11.8732 154.162 11.9962V16.0317C154.162 16.2777 154.362 16.4771 154.608 16.4771H158.891C159.014 16.4771 159.113 16.5768 159.113 16.6998V20.9889C159.113 21.1119 159.014 21.2116 158.891 21.2116H154.608C154.362 21.2116 154.162 21.411 154.162 21.657V25.6615C154.162 25.7845 154.063 25.8842 153.94 25.8842H149.589C149.466 25.8842 149.366 25.7845 149.366 25.6615V21.657C149.366 21.411 149.166 21.2116 148.92 21.2116H144.606C144.483 21.2116 144.384 21.1119 144.384 20.9889V16.6998C144.384 16.5768 144.483 16.4771 144.606 16.4771H148.92C149.166 16.4771 149.366 16.2777 149.366 16.0317V11.9962C149.366 11.8732 149.466 11.7735 149.589 11.7735H153.94Z" fill="white"/></svg></span></a><span><em>en</em> 100</span></p>
   <div class="lentes" role="group" aria-label="Qué ver">
-    <button type="button" data-lente="sesiones" aria-pressed="true">100 sesiones</button>
-    <button type="button" data-lente="usuarios" aria-pressed="false">100 usuarios</button>
+    <button type="button" data-lente="usuarios" aria-pressed="true"><span class="fa" aria-hidden="true">&#xf007;</span>100 usuarios</button>
+    <button type="button" data-lente="sesiones" aria-pressed="false"><span class="fa" aria-hidden="true">&#xf544;</span>100 sesiones</button>
   </div>
-  <div class="resumen" aria-live="polite"><span class="periodo" id="periodo"></span><p class="total-real"><b id="total-n"></b> <span id="total-unidad">sesiones</span> reales</p></div>
+  <div class="resumen" aria-live="polite"><span class="periodo" id="periodo"></span><p class="total-real"><b id="total-n"></b> <span id="total-unidad">usuarios</span> reales</p></div>
+  <button type="button" class="tema" id="tema" role="switch" aria-checked="false" aria-label="Modo oscuro"><span class="fa sol" aria-hidden="true">&#xf185;</span><span class="fa luna" aria-hidden="true">&#xf186;</span></button>
 </header>
-<div class="filtros"><nav class="chips" id="chips" aria-label="Indicadores"></nav><div class="menu-panel" id="menu-panel" role="dialog" aria-label="Todos los indicadores" hidden></div></div>
+<div class="bento filtros"><nav class="chips" id="chips" aria-label="Indicadores"></nav><div class="menu-panel" id="menu-panel" role="dialog" aria-label="Todos los indicadores" hidden></div></div>
 
-<main>
-  <section class="escena" id="escena">
-    <canvas id="lienzo" role="img" aria-label=""></canvas>
-    <div class="rotulos" id="rotulos"></div>
-    <div class="intro" id="intro" aria-hidden="true"><div class="intro-cuenta"><b id="intro-num">0</b><span>sesiones en actuaria+</span><small id="intro-periodo"></small></div><p class="intro-pregunta">¿Y si fueran <em>100</em>?</p></div>
-    <div class="ficha" id="ficha" role="status" aria-live="polite"></div>
+<main class="pagina-cuerpo">
+  <section class="vidrio">
+    <div class="escena" id="escena">
+      <canvas id="lienzo" role="img" aria-label=""></canvas>
+      <div class="rotulos" id="rotulos"></div>
+      <div class="intro" id="intro" aria-hidden="true"><div class="intro-cuenta"><b id="intro-num">0</b><span id="intro-unidad">usuarios en actuaria+</span><small id="intro-periodo"></small></div><p class="intro-pregunta">¿Y si fueran <em>100</em>?</p></div>
+      <div class="ficha" id="ficha" role="status" aria-live="polite"></div>
+    </div>
   </section>
-  <div class="pie-escena">
-    <div>
+  <div class="fila">
+    <div class="bento frase-caja">
       <p class="frase" id="frase" aria-live="polite"></p>
       <p class="frase-sub" id="frase-sub"></p>
     </div>
-    <div class="acciones"><button type="button" id="abrir-metodo">Cómo se hizo</button></div>
+    <div class="bento acciones">
+      <a class="boton boton-primario" id="descargar-pdf" href="actuaria-plus-en-100.pdf" download>Descargar PDF <span class="fa" aria-hidden="true">&#xf56d;</span></a>
+      <button type="button" class="boton boton-secundario" id="compartir">Compartir <span class="fa" aria-hidden="true">&#xf1e0;</span></button>
+      <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+    </div>
   </div>
-  <details class="tabla" id="tabla"><summary>Ver las cifras en una tabla</summary><div id="tabla-cuerpo"></div></details>
+  <details class="bento tabla" id="tabla"><summary><span class="fa" aria-hidden="true">&#xf0ce;</span>Ver las cifras en una tabla</summary><div class="tabla-caja" id="tabla-cuerpo"></div></details>
 </main>
+
+<footer class="bento creditos">
+  <p><strong>Área de Diseño de Producto UX UI · Actuaria Consultores.</strong> Datos de Microsoft Clarity de <a href="https://plus.actuaria.com/auth/login" target="_blank" rel="noopener">actuaria+</a> (plus.actuaria.com), <span id="pie-periodo"></span>, sin el tráfico de bots ni el interno de Actuaria, que Clarity filtra por IP. Solo se usan totales: ningún dato de una persona.</p>
+  <button type="button" class="boton boton-secundario" id="abrir-metodo">Cómo se hizo <span class="fa" aria-hidden="true">&#xf05a;</span></button>
+</footer>
+</div>
 
 <dialog id="metodo" aria-labelledby="metodo-titulo">
   <div class="dlg">
-    <button type="button" class="cerrar" id="cerrar-metodo" aria-label="Cerrar">×</button>
+    <button type="button" class="cerrar" id="cerrar-metodo" aria-label="Cerrar"><span class="fa" aria-hidden="true">&#xf00d;</span></button>
     <h2 id="metodo-titulo">Cómo se hizo</h2>
     <div id="metodo-cuerpo"></div>
   </div>
 </dialog>
-
-<footer class="creditos">
-  <p><strong>Área de Diseño de Producto UX UI · Actuaria Consultores.</strong> Datos de Microsoft Clarity de <a href="https://plus.actuaria.com/auth/login" target="_blank" rel="noopener">actuaria+</a> (plus.actuaria.com), <span id="pie-periodo"></span>, sin el tráfico de bots ni el interno de Actuaria, que Clarity filtra por IP. Solo se usan totales: ningún dato de una persona.</p>
-</footer>
 
 <script type="application/json" id="datos">{"generado":"2026-11-11T16:52:19.907Z","periodo":{"desde":"2025-12-01","hasta":"2026-11-10","texto":"del 1 de diciembre de 2025 al 10 de noviembre de 2026","corto":"1 dic 2025 – 10 nov 2026","desdeTexto":"1 de diciembre de 2025"},"fuente":"Microsoft Clarity · proyecto actuaria+ (plus.actuaria.com) · tablero, sin bots ni tráfico interno","sesiones":25066,"usuarios":7722,"bots":1882,"porFigura":{"sesiones":251,"usuarios":77},"otras":{"paginasPorSesion":5.34,"tiempoActivoMin":4.1,"tiempoTotalMin":11.7,"usuariosUnicos":7722,"desplazamiento":99.35,"nuevo":{"sesiones":6042,"fallidos":62.75,"retrocesos":53.65,"rabia":4.77}},"categorias":{"d":{"escritorio":"Computadora","otro":"Otro dispositivo"},"r":{"app":"Desde la misma app","directo":"Directo","web":"Desde actuaria.com","buscador":"Buscadores","correo":"Correo","otros":"Otros sitios"},"e":{"login":"La pantalla de ingreso","presentacion":"La presentación de actuaria+","inicio":"El inicio de su cuenta","error":"La pantalla de error","estudios":"Sus estudios","registro":"El registro","otras":"Otra pantalla"},"n":{"nueva":"Primera vez","vuelve":"Ya había entrado"},"o":{"windows":"Windows","otros":"Otro sistema"},"b":{"chrome":"Chrome","edge":"Edge","firefox":"Firefox","otros":"Otro navegador"},"y":{"quito":"Quito","guayaquil":"Guayaquil","cuenca":"Cuenca","ecuador":"Resto de Ecuador","fuera":"Fuera de Ecuador"},"exp":{"fluida":"Sin tropiezos","tropiezo":"Con algún tropiezo","enojo":"Con señales de enojo"},"est":{"no":"No abren «Nuevo estudio»","abren":"Lo abren, sin comenzar","comienzan":"Comienzan un estudio","compran":"Llegan a comprar"},"m":{"m2025-12":"Diciembre 2025","m2026-01":"Enero 2026","m2026-02":"Febrero 2026","m2026-03":"Marzo 2026","m2026-04":"Abril 2026","m2026-05":"Mayo 2026","m2026-06":"Junio 2026","m2026-07":"Julio 2026","m2026-08":"Agosto 2026","m2026-09":"Septiembre 2026","m2026-10":"Octubre 2026","m2026-11":"Noviembre 2026 (hasta el 10)"},"w":{"lun":"Lunes","mar":"Martes","mie":"Miércoles","jue":"Jueves","vie":"Viernes","sab":"Sábado","dom":"Domingo"},"s":{"laborable":"De lunes a viernes","finde":"Fin de semana"},"estU":{"no":"Nunca abrieron «Nuevo estudio»","abren":"Lo abrieron, sin comenzar","comienzan":"Comenzaron un estudio"}},"real":{"sesiones":{"m":{"m2025-12":1.5,"m2026-01":5.6,"m2026-02":26.7,"m2026-03":21.2,"m2026-04":10.3,"m2026-05":3.8,"m2026-06":3.3,"m2026-07":3.5,"m2026-08":3.4,"m2026-09":5.8,"m2026-10":9.9,"m2026-11":5.1},"w":{"lun":19.9,"mar":19.1,"mie":20.3,"jue":19.5,"vie":17.2,"sab":2.3,"dom":1.8},"s":{"laborable":96,"finde":4},"r":{"app":38.1,"web":20.4,"buscador":6.5,"correo":0.5,"otros":0.3,"directo":34.3},"n":{"nueva":39.8,"vuelve":60.2},"li":{"si":29.5,"no":70.5},"fo":{"si":35,"no":65},"de":{"si":8.1,"no":91.9},"bu":{"si":8.7,"no":91.3},"rg":{"si":1.8,"no":98.2},"co":{"si":0.4,"no":99.6},"fa":{"si":25.7,"no":74.3},"rr":{"si":23.5,"no":76.5},"ra":{"si":1.4,"no":98.6},"js":{"si":0.4,"no":99.6},"d":{"escritorio":98.6,"otro":1.4},"o":{"windows":96.6,"otros":3.4},"b":{"chrome":65.4,"edge":22.3,"firefox":10.1,"otros":2.2},"exp":{"fluida":54.5,"tropiezo":44.1,"enojo":1.4},"est":{"no":75.9,"abren":11.9,"comienzan":11.8,"compran":0.4},"e":{"login":58.5,"presentacion":13.4,"inicio":5.8,"error":4.7,"estudios":10.1,"registro":0.8,"otras":6.8}},"usuarios":{"vu":{"si":43.4,"no":56.6},"li":{"si":48.2,"no":51.8},"fo":{"si":53.4,"no":46.6},"de":{"si":16.7,"no":83.3},"bu":{"si":19.1,"no":80.9},"rg":{"si":5.6,"no":94.4},"co":{"si":1.4,"no":98.6},"fa":{"si":43.2,"no":56.8},"rr":{"si":39.5,"no":60.5},"ra":{"si":4.1,"no":95.9},"est":{"no":63.5,"abren":11,"comienzan":25.5}}},"conteos":{"sesiones":{"r":{"app":9543,"web":5107,"buscador":1627,"correo":136,"otros":65,"directo":8588},"n":{"nueva":9967,"vuelve":15100},"li":{"si":7401,"no":17665},"fo":{"si":8781,"no":16285},"de":{"si":2041,"no":23025},"bu":{"si":2179,"no":22887},"rg":{"si":458,"no":24608},"co":{"si":109,"no":24957},"fa":{"si":6434,"no":18632},"rr":{"si":5882,"no":19184},"ra":{"si":356,"no":24710},"js":{"si":108,"no":24958},"d":{"escritorio":24720,"otro":346},"o":{"windows":24208,"otros":858},"b":{"chrome":16403,"edge":5595,"firefox":2527,"otros":541},"exp":{"fluida":13662,"tropiezo":11048,"enojo":356},"est":{"no":19024,"abren":2992,"comienzan":2962,"compran":88},"e":{"login":14676,"presentacion":3348,"inicio":1446,"error":1172,"estudios":2520,"registro":193,"otras":1711},"m":{"m2025-12":365,"m2026-01":1415,"m2026-02":6688,"m2026-03":5305,"m2026-04":2592,"m2026-05":958,"m2026-06":817,"m2026-07":871,"m2026-08":841,"m2026-09":1450,"m2026-10":2478,"m2026-11":1287},"w":{"lun":4990,"mar":4803,"mie":5083,"jue":4884,"vie":4317,"sab":567,"dom":442},"s":{"laborable":24077,"finde":1009}},"usuarios":{"vu":{"si":3350,"no":4372},"li":{"si":3720,"no":4002},"fo":{"si":4122,"no":3600},"de":{"si":1289,"no":6433},"bu":{"si":1472,"no":6250},"rg":{"si":430,"no":7292},"co":{"si":105,"no":7617},"fa":{"si":3335,"no":4387},"rr":{"si":3049,"no":4673},"ra":{"si":314,"no":7408},"est":{"no":4907,"abren":848,"comienzan":1967}}},"cruces":{"entrada":["login","presentacion","inicio","error","estudios","registro"],"friccion":true,"estudio":true},"lentes":{"sesiones":{"unidades":[{"e":"otras","id":1,"r":"app","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"comienzan","m":"m2026-04","w":"lun","s":"laborable"},{"e":"error","id":2,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"no","ra":"si","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"enojo","est":"abren","m":"m2026-04","w":"vie","s":"laborable"},{"e":"login","id":3,"r":"buscador","n":"vuelve","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"comienzan","m":"m2026-04","w":"lun","s":"laborable"},{"e":"login","id":4,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"abren","m":"m2026-04","w":"lun","s":"laborable"},{"e":"login","id":5,"r":"correo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-04","w":"vie","s":"laborable"},{"e":"login","id":6,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"si","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-04","w":"lun","s":"laborable"},{"e":"login","id":7,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"abren","m":"m2026-04","w":"lun","s":"laborable"},{"e":"login","id":8,"r":"buscador","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-04","w":"vie","s":"laborable"},{"e":"estudios","id":9,"r":"app","n":"vuelve","li":"no","fo":"no","de":"si","bu":"si","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"vie","s":"laborable"},{"e":"login","id":10,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-09","w":"mar","s":"laborable"},{"e":"presentacion","id":11,"r":"app","n":"nueva","li":"no","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-09","w":"vie","s":"laborable"},{"e":"login","id":12,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-03","w":"mie","s":"laborable"},{"e":"login","id":13,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"tropiezo","est":"no","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":14,"r":"web","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-09","w":"vie","s":"laborable"},{"e":"login","id":15,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-03","w":"lun","s":"laborable"},{"e":"login","id":16,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"comienzan","m":"m2026-11","w":"mie","s":"laborable"},{"e":"presentacion","id":17,"r":"web","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-11","w":"mie","s":"laborable"},{"e":"login","id":18,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"abren","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":19,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-04","w":"vie","s":"laborable"},{"e":"otras","id":20,"r":"web","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":21,"r":"directo","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-11","w":"mar","s":"laborable"},{"e":"login","id":22,"r":"app","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-10","w":"mie","s":"laborable"},{"e":"login","id":23,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"mie","s":"laborable"},{"e":"otras","id":24,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"abren","m":"m2026-01","w":"sab","s":"finde"},{"e":"otras","id":25,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-10","w":"lun","s":"laborable"},{"e":"presentacion","id":26,"r":"web","n":"nueva","li":"no","fo":"no","de":"si","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-03","w":"sab","s":"finde"},{"e":"login","id":27,"r":"web","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"tropiezo","est":"comienzan","m":"m2026-03","w":"lun","s":"laborable"},{"e":"presentacion","id":28,"r":"web","n":"nueva","li":"no","fo":"no","de":"si","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"mie","s":"laborable"},{"e":"login","id":29,"r":"directo","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-08","w":"lun","s":"laborable"},{"e":"login","id":30,"r":"app","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"comienzan","m":"m2026-09","w":"dom","s":"finde"},{"e":"login","id":31,"r":"web","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"mar","s":"laborable"},{"e":"login","id":32,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"tropiezo","est":"no","m":"m2026-01","w":"mie","s":"laborable"},{"e":"error","id":33,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-07","w":"mie","s":"laborable"},{"e":"login","id":34,"r":"directo","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-11","w":"mar","s":"laborable"},{"e":"login","id":35,"r":"directo","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"tropiezo","est":"no","m":"m2026-01","w":"lun","s":"laborable"},{"e":"login","id":36,"r":"directo","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-02","w":"mie","s":"laborable"},{"e":"login","id":37,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"si","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-07","w":"jue","s":"laborable"},{"e":"login","id":38,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-05","w":"mie","s":"laborable"},{"e":"inicio","id":39,"r":"directo","n":"nueva","li":"no","fo":"no","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"comienzan","m":"m2026-03","w":"jue","s":"laborable"},{"e":"login","id":40,"r":"directo","n":"nueva","li":"si","fo":"no","de":"si","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":41,"r":"directo","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-03","w":"mar","s":"laborable"},{"e":"estudios","id":42,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"tropiezo","est":"no","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":43,"r":"web","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"jue","s":"laborable"},{"e":"estudios","id":44,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"comienzan","m":"m2026-01","w":"vie","s":"laborable"},{"e":"presentacion","id":45,"r":"web","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"mar","s":"laborable"},{"e":"login","id":46,"r":"web","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"comienzan","m":"m2026-08","w":"mie","s":"laborable"},{"e":"presentacion","id":47,"r":"app","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-03","w":"mar","s":"laborable"},{"e":"estudios","id":48,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-03","w":"jue","s":"laborable"},{"e":"login","id":49,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"otros","b":"firefox","exp":"fluida","est":"no","m":"m2026-03","w":"mie","s":"laborable"},{"e":"presentacion","id":50,"r":"web","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"tropiezo","est":"no","m":"m2026-07","w":"vie","s":"laborable"},{"e":"login","id":51,"r":"app","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-10","w":"mar","s":"laborable"},{"e":"registro","id":52,"r":"directo","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-01","w":"jue","s":"laborable"},{"e":"login","id":53,"r":"app","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-03","w":"vie","s":"laborable"},{"e":"login","id":54,"r":"directo","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-03","w":"mie","s":"laborable"},{"e":"error","id":55,"r":"web","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-11","w":"jue","s":"laborable"},{"e":"presentacion","id":56,"r":"app","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"abren","m":"m2026-03","w":"mar","s":"laborable"},{"e":"inicio","id":57,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"tropiezo","est":"no","m":"m2026-08","w":"mie","s":"laborable"},{"e":"presentacion","id":58,"r":"web","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"tropiezo","est":"no","m":"m2026-06","w":"mar","s":"laborable"},{"e":"error","id":59,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-02","w":"vie","s":"laborable"},{"e":"estudios","id":60,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-04","w":"jue","s":"laborable"},{"e":"login","id":61,"r":"web","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"abren","m":"m2026-02","w":"jue","s":"laborable"},{"e":"login","id":62,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"otro","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-03","w":"jue","s":"laborable"},{"e":"presentacion","id":63,"r":"web","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"tropiezo","est":"no","m":"m2026-10","w":"jue","s":"laborable"},{"e":"error","id":64,"r":"app","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"jue","s":"laborable"},{"e":"presentacion","id":65,"r":"buscador","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"tropiezo","est":"no","m":"m2026-10","w":"mar","s":"laborable"},{"e":"login","id":66,"r":"directo","n":"vuelve","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"comienzan","m":"m2026-02","w":"vie","s":"laborable"},{"e":"login","id":67,"r":"app","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"otros","exp":"fluida","est":"no","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":68,"r":"app","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"abren","m":"m2026-10","w":"vie","s":"laborable"},{"e":"inicio","id":69,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-01","w":"vie","s":"laborable"},{"e":"login","id":70,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-09","w":"lun","s":"laborable"},{"e":"inicio","id":71,"r":"buscador","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-09","w":"mie","s":"laborable"},{"e":"estudios","id":72,"r":"app","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"otros","exp":"fluida","est":"no","m":"m2026-07","w":"jue","s":"laborable"},{"e":"login","id":73,"r":"buscador","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"jue","s":"laborable"},{"e":"login","id":74,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"mar","s":"laborable"},{"e":"otras","id":75,"r":"directo","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"comienzan","m":"m2026-02","w":"mie","s":"laborable"},{"e":"login","id":76,"r":"web","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"comienzan","m":"m2026-03","w":"jue","s":"laborable"},{"e":"login","id":77,"r":"web","n":"vuelve","li":"si","fo":"si","de":"no","bu":"no","rg":"si","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"fluida","est":"no","m":"m2026-10","w":"mar","s":"laborable"},{"e":"login","id":78,"r":"app","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-02","w":"vie","s":"laborable"},{"e":"login","id":79,"r":"directo","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-03","w":"jue","s":"laborable"},{"e":"presentacion","id":80,"r":"app","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"tropiezo","est":"no","m":"m2026-03","w":"mar","s":"laborable"},{"e":"login","id":81,"r":"app","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2025-12","w":"jue","s":"laborable"},{"e":"login","id":82,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-06","w":"jue","s":"laborable"},{"e":"login","id":83,"r":"directo","n":"vuelve","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"tropiezo","est":"no","m":"m2026-03","w":"lun","s":"laborable"},{"e":"login","id":84,"r":"app","n":"nueva","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"abren","m":"m2026-05","w":"mie","s":"laborable"},{"e":"login","id":85,"r":"app","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-06","w":"vie","s":"laborable"},{"e":"estudios","id":86,"r":"web","n":"vuelve","li":"no","fo":"no","de":"no","bu":"si","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"fluida","est":"comienzan","m":"m2026-02","w":"mar","s":"laborable"},{"e":"estudios","id":87,"r":"buscador","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"abren","m":"m2026-03","w":"jue","s":"laborable"},{"e":"login","id":88,"r":"buscador","n":"nueva","li":"si","fo":"no","de":"si","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"otros","b":"chrome","exp":"fluida","est":"no","m":"m2026-10","w":"mar","s":"laborable"},{"e":"estudios","id":89,"r":"directo","n":"nueva","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-05","w":"jue","s":"laborable"},{"e":"otras","id":90,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"abren","m":"m2026-05","w":"mie","s":"laborable"},{"e":"login","id":91,"r":"app","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"lun","s":"laborable"},{"e":"login","id":92,"r":"app","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-02","w":"mie","s":"laborable"},{"e":"inicio","id":93,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"si","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-02","w":"dom","s":"finde"},{"e":"estudios","id":94,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-03","w":"mie","s":"laborable"},{"e":"login","id":95,"r":"app","n":"vuelve","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"firefox","exp":"fluida","est":"no","m":"m2026-02","w":"mar","s":"laborable"},{"e":"login","id":96,"r":"web","n":"vuelve","li":"no","fo":"no","de":"si","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"edge","exp":"fluida","est":"no","m":"m2026-03","w":"vie","s":"laborable"},{"e":"presentacion","id":97,"r":"web","n":"nueva","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"tropiezo","est":"no","m":"m2026-10","w":"lun","s":"laborable"},{"e":"inicio","id":98,"r":"directo","n":"vuelve","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-02","w":"mar","s":"laborable"},{"e":"login","id":99,"r":"app","n":"vuelve","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","js":"no","d":"escritorio","o":"otros","b":"chrome","exp":"tropiezo","est":"abren","m":"m2026-03","w":"jue","s":"laborable"},{"e":"otras","id":100,"r":"app","n":"nueva","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","js":"no","d":"escritorio","o":"windows","b":"chrome","exp":"fluida","est":"no","m":"m2026-10","w":"mar","s":"laborable"}]},"usuarios":{"unidades":[{"id":1,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":2,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":3,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":4,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"si","est":"comienzan","d":"escritorio"},{"id":5,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":6,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":7,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":8,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":9,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":10,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":11,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":12,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":13,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"comienzan","d":"escritorio"},{"id":14,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":15,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":16,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":17,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":18,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":19,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":20,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":21,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":22,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":23,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"si","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":24,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":25,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"comienzan","d":"escritorio"},{"id":26,"vu":"no","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":27,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":28,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":29,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"si","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":30,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":31,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":32,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":33,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":34,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":35,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"si","est":"comienzan","d":"escritorio"},{"id":36,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":37,"vu":"si","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":38,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":39,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":40,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":41,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":42,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":43,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":44,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":45,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":46,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":47,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":48,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"otro"},{"id":49,"vu":"no","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":50,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":51,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"comienzan","d":"escritorio"},{"id":52,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":53,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":54,"vu":"no","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":55,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"si","est":"comienzan","d":"escritorio"},{"id":56,"vu":"si","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":57,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":58,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"comienzan","d":"escritorio"},{"id":59,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":60,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":61,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"abren","d":"escritorio"},{"id":62,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":63,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":64,"vu":"no","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":65,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":66,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":67,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":68,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"si","co":"si","fa":"si","rr":"si","ra":"si","est":"comienzan","d":"escritorio"},{"id":69,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":70,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":71,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"si","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":72,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":73,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":74,"vu":"si","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":75,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":76,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":77,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":78,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":79,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":80,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":81,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":82,"vu":"si","li":"si","fo":"si","de":"no","bu":"si","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":83,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":84,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":85,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":86,"vu":"no","li":"si","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":87,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":88,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":89,"vu":"si","li":"no","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"si","ra":"no","est":"no","d":"escritorio"},{"id":90,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":91,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"si","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":92,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"si","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"},{"id":93,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":94,"vu":"si","li":"si","fo":"si","de":"no","bu":"no","rg":"si","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":95,"vu":"no","li":"si","fo":"si","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":96,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":97,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":98,"vu":"no","li":"no","fo":"no","de":"no","bu":"no","rg":"no","co":"no","fa":"no","rr":"no","ra":"no","est":"no","d":"escritorio"},{"id":99,"vu":"si","li":"si","fo":"si","de":"si","bu":"no","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"abren","d":"escritorio"},{"id":100,"vu":"si","li":"si","fo":"si","de":"si","bu":"si","rg":"no","co":"no","fa":"si","rr":"si","ra":"no","est":"comienzan","d":"escritorio"}]}}}</script>
 <script>
@@ -199,13 +292,21 @@
   const miles = (x) => Number(x).toLocaleString('es-EC').replace(/,/g, '.');
 
   // ---------- Indicators ----------
-  const COL = { indigo: '#7088f2', naranja: '#f0794a', celeste: '#62b8e8', verde: '#5cc08f', ambar: '#f2b45a', lila: '#b08cf0', rosa: '#ee8fb0', gris: '#a3a9bd', crema: '#f3e6c8' };
+  // Group colours per theme. Pastel tones read on the dark stage; on the light one they are darker, so the big numbers
+  // keep at least 3:1 (large text) against the floor. A category keeps its tone and reads the colour of the theme.
+  const PALETAS = {
+    oscuro: { indigo: '#7088f2', naranja: '#f0794a', celeste: '#62b8e8', verde: '#5cc08f', ambar: '#f2b45a', lila: '#b08cf0', rosa: '#ee8fb0', gris: '#a3a9bd', crema: '#f3e6c8' },
+    claro: { indigo: '#3d56c9', naranja: '#c54a1c', celeste: '#1d73a8', verde: '#1f7f52', ambar: '#9a6100', lila: '#6f45c2', rosa: '#b8345f', gris: '#5d6680', crema: '#8a6a2a' },
+  };
+  let tema = 'claro';
+  const COL = new Proxy({}, { get: (_, k) => PALETAS[tema][k] });
+  const cat = (key, label, tono, frase) => ({ key, label, tono, frase, get color() { return COL[this.tono]; } });
   const C = D.categorias;
   // Only the categories that armar-datos wrote into D.categorias are shown (a group Clarity does not have is skipped).
-  const catsDe = (key, colores, frases, extra = {}) => Object.keys(colores).filter((k) => C[key] && k in C[key]).map((k) => ({ key: k, label: (extra.labels && extra.labels[k]) || C[key][k], color: COL[colores[k]], frase: frases[k] }));
+  const catsDe = (key, colores, frases, extra = {}) => Object.keys(colores).filter((k) => C[key] && k in C[key]).map((k) => cat(k, (extra.labels && extra.labels[k]) || C[key][k], colores[k], frases[k]));
   // Yes/no indicators (smart events and frictions of Clarity). A «yes» that gets 0 of the 100 still shows, with its
   // real share and sessions.
-  const siNo = (key, tema, label, pregunta, si, no, color, extra = {}) => ({ key, tema, label, pregunta, destacar: 'si', cero: ['si'], cats: [{ key: 'si', label: si[0], color: COL[color], frase: si[1] }, { key: 'no', label: no[0], color: COL.gris, frase: no[1] }], ...extra });
+  const siNo = (key, tema, label, pregunta, si, no, color, extra = {}) => ({ key, tema, label, pregunta, destacar: 'si', cero: ['si'], cats: [cat('si', si[0], color, si[1]), cat('no', no[0], 'gris', no[1])], ...extra });
   // «When»: the month comes from monthly ranges; weekday and time of day from Clarity's filters.
   const PALETA = ['indigo', 'naranja', 'verde', 'ambar', 'lila', 'celeste', 'rosa', 'gris', 'crema'];
   const mesNombre = (k) => C.m[k].split(' (')[0].toLowerCase();
@@ -266,99 +367,150 @@
   // Real sessions (or users) behind a group: the table's last column and the «solo X %» note of a group with 0 of the 100.
   const conteoDe = (lente, ind, cat) => { const c = D.conteos[lente] && D.conteos[lente][ind]; return c && c[cat] != null ? c[cat] : null; };
 
-  // ---------- Pixel figures (own procedural sprites, 15 × 25 logical px) ----------
-  const FW = 15, FH = 25;
-  const PIEL = ['#f2cba7', '#e3b088', '#cf9466', '#b17646', '#8f5c35', '#6e4428'];
-  const PELO = ['#17110e', '#2b1b13', '#45291b', '#694528', '#8a8a92', '#dcd5c8', '#5a1f1a'];
+  // ---------- Pixel figures (own procedural sprites, 19 × 29 logical px, 16-bit style) ----------
+  // Light comes from the top left: every part has a base, a highlight and a shadow tone, and the silhouette gets a
+  // selective outline (a very dark version of the colour it touches, not flat black), like 90s console sprites.
+  const FW = 19, FH = 29;
+  const PIEL = ['#f4cfab', '#e6b48c', '#d29a6c', '#b67a4a', '#93603a', '#70462a'];
+  const PELO = ['#1a130f', '#2e1d14', '#4a2c1c', '#6e4a2a', '#8e8e96', '#ddd6c9', '#5e221b', '#b8742c'];
   const ROPA = ['#2f4ab8', '#c44b2a', '#3a7d5c', '#7a5bb0', '#d9a441', '#3d4b66', '#e8e2d6', '#8a2f3c', '#2c8aa6', '#5c5c66', '#d8775a', '#4c64d9'];
   const PANT = ['#262b44', '#3b2f2a', '#4a5568', '#1f2533', '#6b5b4b', '#2d3a5a', '#59443a'];
-  const ZAP = ['#1a1a22', '#3b2a20', '#e9e6df', '#4a2a22'];
-  const BORDE = '#05060c';
-  // Sessions are androids (steel face and hands, helmet, glowing visor, antenna, ear bolts, mouth grill); users are
-  // people. Same body and clothes, so a session reads as «a visit by someone», not as a person.
+  const ZAP = ['#1a1a22', '#3b2a20', '#e9e6df', '#4a2a22', '#7a2f2a'];
+  // Sessions are androids: steel face and hands, helmet with a lit antenna, two-row visor, mouth grill, bolts, a chest
+  // light and metal knees. Users are people. Same body and clothes, so a session reads as «a visit by someone».
   const ACERO = ['#c3cbdb', '#aab4c8', '#d4dae6', '#9aa5bc', '#b7c0d2'];
-  const CASCO = ['#5b6683', '#3f4864', '#76819e', '#4a5675'];
-  const LUZ = ['#5ef0ff', '#7dffb2', '#ffd166', '#ff8a6b'];
+  const CASCO = ['#5b6683', '#3f4864', '#76819e', '#4a5675', '#2f3a57'];
+  const LUZ = ['#5ef0ff', '#7dffb2', '#ffd166', '#ff8a6b', '#c49bff'];
   function azar(semilla) { let a = semilla * 2654435761 >>> 0; return () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
   const elegir = (r, arr) => arr[Math.floor(r() * arr.length)];
+  function shade(hex, d) { const n = parseInt(hex.slice(1), 16); const c = (s) => Math.max(0, Math.min(255, ((n >> s) & 255) + d)); return '#' + ((c(16) << 16) | (c(8) << 8) | c(0)).toString(16).padStart(6, '0'); }
+  function mezcla(a, b, t) { const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const x = p(a), y = p(b); return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, '0')).join(''); }
   function hacerFigura(u, lente) {
     const robot = lente === 'sesiones';
     const r = azar(u.id * 7 + (robot ? 2000 : 3000));
-    const piel = robot ? elegir(r, ACERO) : elegir(r, PIEL), pelo = robot ? elegir(r, CASCO) : r() < .14 ? elegir(r, ['#8a8a92', '#dcd5c8']) : elegir(r, PELO.slice(0, 5).concat(PELO[6]));
-    const estiloPelo = robot ? 'casco' : elegir(r, ['corto', 'corto', 'largo', 'largo', 'moño', 'rapado', 'gorra', 'melena']);
+    const piel = robot ? elegir(r, ACERO) : elegir(r, PIEL);
+    const pelo = robot ? elegir(r, CASCO) : r() < .14 ? elegir(r, ['#8e8e96', '#ddd6c9']) : elegir(r, PELO.filter((c) => c !== '#8e8e96' && c !== '#ddd6c9'));
+    const estiloPelo = robot ? 'casco' : elegir(r, ['corto', 'corto', 'largo', 'largo', 'moño', 'rapado', 'gorra', 'melena', 'coleta']);
     const luz = robot ? elegir(r, LUZ) : null;
     const arriba = elegir(r, ['camisa', 'camisa', 'terno', 'blusa', 'chompa', 'camiseta', 'camiseta', 'vestido']);
-    const ropa = elegir(r, ROPA), ropa2 = elegir(r, ROPA), pant = elegir(r, PANT), zap = elegir(r, ZAP);
-    const lentes = !robot && r() < .22, falda = arriba !== 'vestido' && r() < .2;
+    const ropa = elegir(r, ROPA), ropa2 = elegir(r, ROPA.filter((c) => c !== ropa)), pant = elegir(r, PANT), zap = elegir(r, ZAP);
+    const lentes = !robot && r() < .22, falda = arriba !== 'vestido' && r() < .2, bolsillo = r() < .5;
     const dispositivo = u.d;
     const frames = [0, 1, 2].map((f) => {
       const g = Array.from({ length: FH }, () => new Array(FW).fill(null));
       const px = (x, y, c) => { if (x >= 0 && x < FW && y >= 0 && y < FH) g[y][x] = c; };
       const rect = (x0, y0, x1, y1, c) => { for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) px(x, y, c); };
-      // legs (f: 0 idle, 1 and 2 walking)
-      const piernas = f === 0 ? [[5, 6], [8, 9]] : f === 1 ? [[4, 5], [8, 9]] : [[5, 6], [9, 10]];
-      const largoPierna = 21;
-      if (arriba === 'vestido' || falda) {
-        const color = arriba === 'vestido' ? ropa : pant;
-        rect(4, 16, 10, 18, color); rect(3, 18, 11, 18, color);
-        for (const [a, b] of piernas) { rect(a, 19, b, largoPierna, piel); }
-      } else {
-        rect(5, 16, 9, 17, pant);
-        for (const [a, b] of piernas) rect(a, 16, b, largoPierna, pant);
+      // a shaded box: base, lit left column and top row, dark right column and bottom row
+      const caja = (x0, y0, x1, y1, c, { luz: l = 22, sombra: s = -32, abajo = true } = {}) => {
+        rect(x0, y0, x1, y1, c);
+        rect(x0, y0, x0, y1, shade(c, l)); rect(x0, y0, x1, y0, shade(c, Math.round(l / 2)));
+        rect(x1, y0, x1, y1, shade(c, s)); if (x1 - 1 > x0) rect(x1 - 1, y0 + 1, x1 - 1, y1, shade(c, Math.round(s / 2)));
+        if (abajo) rect(x0 + 1, y1, x1, y1, shade(c, s));
+      };
+      // ---- legs and shoes (f: 0 idle, 1 and 2 walking) ----
+      const piernas = f === 0 ? [[6, 8, 0], [10, 12, 0]] : f === 1 ? [[5, 7, -1], [11, 13, 0]] : [[6, 8, 0], [10, 12, -1]];
+      const vestido = arriba === 'vestido' || falda;
+      for (const [a, b, alza] of piernas) {
+        const pie = 27 + alza;
+        if (vestido) caja(a, 23, b, pie - 1, piel, { luz: 14, sombra: -26, abajo: false });
+        else caja(a, 20, b, pie - 1, pant, { luz: 18, sombra: -30, abajo: false });
+        if (robot && !vestido) { px(a, 23, '#d4dae6'); px(b, 23, shade('#9aa5bc', -20)); }
+        if (robot && vestido) rect(a, 24, b, 24, '#9aa5bc');
+        caja(a - (a < 9 ? 1 : 0), pie, b + (a < 9 ? 0 : 1), pie + 1, zap, { luz: 34, sombra: -24 });
+        px(a + (a < 9 ? 0 : 1), pie, shade(zap, 60));
       }
-      for (const [a, b] of piernas) rect(a, 22, b, 22, zap);
-      // torso
-      const torso = arriba === 'terno' ? ropa2 === '#e8e2d6' ? '#2a3150' : '#2a3150' : ropa;
-      rect(4, 9, 10, 15, arriba === 'vestido' ? ropa : torso);
-      if (arriba === 'terno') { rect(7, 9, 7, 12, '#eceae4'); rect(7, 10, 7, 13, ropa2 === '#e8e2d6' ? '#c44b2a' : ropa2); px(6, 9, '#eceae4'); px(8, 9, '#eceae4'); }
-      if (arriba === 'camisa') { px(6, 9, '#f4f2ec'); px(8, 9, '#f4f2ec'); rect(7, 10, 7, 15, shade(ropa, -18)); }
-      if (arriba === 'blusa') { rect(6, 9, 8, 9, piel); }
-      if (arriba === 'chompa') { rect(4, 13, 10, 13, ropa2); }
-      if (arriba === 'camiseta') { px(7, 9, piel); }
-      // arms swing with the walk
-      const brazo = arriba === 'camiseta' || arriba === 'blusa' ? [ropa, piel] : [torso, torso];
-      const manoIzq = f === 1 ? 14 : f === 2 ? 15 : 15, manoDer = f === 1 ? 15 : f === 2 ? 14 : 15;
-      rect(3, 9, 3, manoIzq - 1, brazo[0]); if (brazo[1] === piel) rect(3, 12, 3, manoIzq - 1, piel); px(3, manoIzq, piel);
-      rect(11, 9, 11, manoDer - 1, brazo[0]); if (brazo[1] === piel) rect(11, 12, 11, manoDer - 1, piel); px(11, manoDer, piel);
-      // neck and head
-      rect(6, 8, 8, 8, piel);
-      rect(5, 3, 9, 7, piel);
+      if (vestido) {
+        const c = arriba === 'vestido' ? ropa : pant;
+        caja(5, 19, 13, 21, c); caja(4, 21, 14, 22, c);
+        px(6, 22, shade(c, -18)); rect(9, 21, 9, 22, shade(c, -18)); px(12, 22, shade(c, -18));
+      } else {
+        caja(6, 20, 12, 21, pant, { abajo: false });
+        rect(9, 21, 9, 22, shade(pant, -28));
+      }
+      // ---- torso and clothes ----
+      const torso = arriba === 'terno' ? '#283052' : ropa;
+      caja(5, 11, 13, 19, torso);
+      if (!vestido) { rect(5, 19, 13, 19, shade(pant, -36)); px(9, 19, '#d8b450'); px(10, 19, shade('#d8b450', -40)); }
+      if (arriba === 'terno') {
+        rect(8, 11, 10, 15, '#eceae4'); px(8, 15, shade(torso, 10)); px(10, 15, shade(torso, -10));
+        rect(9, 12, 9, 16, ropa2); px(9, 12, shade(ropa2, 30)); px(9, 16, shade(ropa2, -30));
+        px(7, 12, shade(torso, 30)); px(11, 12, shade(torso, -10));
+      }
+      if (arriba === 'camisa') {
+        px(8, 11, '#f6f4ee'); px(10, 11, '#f6f4ee'); rect(9, 12, 9, 18, shade(ropa, -20));
+        px(9, 13, '#f1efe8'); px(9, 15, '#f1efe8'); px(9, 17, '#f1efe8');
+        if (bolsillo) { rect(6, 13, 7, 14, shade(ropa, -14)); px(6, 13, shade(ropa, 10)); }
+      }
+      if (arriba === 'blusa') { rect(8, 11, 10, 11, piel); px(9, 12, piel); rect(6, 15, 12, 15, shade(ropa, -12)); }
+      if (arriba === 'chompa') { rect(6, 15, 12, 16, ropa2); rect(6, 15, 12, 15, shade(ropa2, 20)); rect(6, 18, 12, 18, shade(ropa, -18)); }
+      if (arriba === 'camiseta') { rect(8, 11, 10, 11, shade(ropa, -26)); px(9, 11, piel); if (bolsillo) px(7, 13, shade(ropa, 30)); }
+      if (arriba === 'vestido') { rect(6, 18, 12, 18, shade(ropa, -26)); rect(8, 11, 10, 11, piel); }
+      // ---- arms (they swing with the walk) and hands ----
+      const corta = arriba === 'camiseta' || arriba === 'blusa';
+      const manga = torso;
+      const manoIzq = f === 1 ? 17 : 18, manoDer = f === 2 ? 17 : 18;
+      for (const [x0, x1, mano] of [[3, 4, manoIzq], [14, 15, manoDer]]) {
+        caja(x0, 11, x1, mano - 1, manga, { luz: 16, sombra: -30, abajo: false });
+        if (corta) caja(x0, 14, x1, mano - 1, piel, { luz: 12, sombra: -24, abajo: false });
+        rect(x0, mano, x1, mano, piel); px(x1, mano, shade(piel, -26));
+        if (robot) px(x0, mano, '#eef2fa');
+      }
+      // ---- neck and head ----
+      rect(8, 10, 10, 10, shade(piel, -30));
+      caja(6, 3, 12, 9, piel, { luz: 18, sombra: -24 });
+      px(7, 4, shade(piel, 30)); px(7, 5, shade(piel, 22));
+      px(5, 6, shade(piel, -20)); px(13, 6, shade(piel, -34)); px(5, 7, shade(piel, -30)); px(13, 7, shade(piel, -40));
       if (robot) {
-        // glowing visor across the eyes, mouth grill, ear bolts, helmet and antenna with its light
-        rect(5, 5, 9, 5, '#141a2c'); rect(6, 5, 8, 5, '#5ef0ff'); px(7, 5, '#d9fdff');
-        px(6, 7, shade(piel, -40)); px(8, 7, shade(piel, -40));
-        px(4, 5, '#eef2fa'); px(10, 5, '#eef2fa');
-        rect(5, 1, 9, 2, pelo); rect(4, 2, 4, 4, pelo); rect(10, 2, 10, 4, pelo); px(6, 1, shade(pelo, 34));
-        px(7, 0, luz);
-        // a joint light on the chest, above the device
-        px(7, 10, luz);
+        // two-row visor, mouth grill, bolts, helmet, antenna and chest light
+        rect(7, 5, 11, 6, '#141a2c'); rect(8, 6, 10, 6, '#5ef0ff'); px(9, 6, '#e6feff'); px(8, 5, '#2aa9c4'); px(10, 5, '#2aa9c4');
+        px(8, 8, shade(piel, -60)); px(9, 8, shade(piel, -34)); px(10, 8, shade(piel, -60));
+        px(5, 6, '#eef2fa'); px(13, 6, '#eef2fa'); px(5, 7, shade('#9aa5bc', -30)); px(13, 7, shade('#9aa5bc', -30));
+        caja(6, 1, 12, 3, pelo, { luz: 40, sombra: -24 }); px(7, 1, shade(pelo, 60)); px(8, 1, shade(pelo, 46));
+        rect(6, 3, 12, 3, shade(pelo, -30)); px(5, 3, pelo); px(13, 3, shade(pelo, -20)); px(5, 4, pelo); px(13, 4, shade(pelo, -20));
+        px(11, 0, '#d4dae6'); px(12, 0, luz);
+        px(11, 12, luz); px(12, 12, shade(luz, -60));
       } else {
-        px(6, 5, '#1b1410'); px(8, 5, '#1b1410');
+        px(8, 6, '#1b1410'); px(10, 6, '#1b1410'); px(8, 7, shade(piel, -14)); px(9, 7, shade(piel, -22));
+        px(7, 7, mezcla(piel, '#e07a7a', .35)); px(11, 7, mezcla(piel, '#e07a7a', .3));
+        px(9, 8, mezcla(shade(piel, -40), '#a03c3c', .35));
+        if (lentes) { rect(7, 6, 11, 6, '#1d1f2b'); px(8, 6, '#9fe1ff'); px(10, 6, '#9fe1ff'); }
+        // hair, with its highlight and shadow
+        const pl = shade(pelo, 40), ps = shade(pelo, -24);
+        const ceja = () => { px(8, 5, ps); px(10, 5, ps); };
+        if (estiloPelo === 'gorra') { caja(5, 2, 13, 3, ropa2, { luz: 30, sombra: -30 }); rect(10, 4, 14, 4, shade(ropa2, -20)); rect(6, 4, 6, 5, pelo); ceja(); }
+        else if (estiloPelo === 'rapado') { rect(6, 2, 12, 3, pelo); px(7, 2, pl); px(12, 3, ps); ceja(); }
+        else {
+          rect(6, 1, 12, 3, pelo); rect(5, 2, 5, 5, pelo); rect(13, 2, 13, 5, ps); px(6, 4, pelo); px(12, 4, ps);
+          px(7, 1, pl); px(8, 1, pl); px(7, 2, pl); rect(10, 1, 12, 1, ps);
+          if (estiloPelo === 'largo') { rect(5, 2, 5, 13, pelo); rect(13, 2, 13, 13, ps); px(5, 8, pl); }
+          if (estiloPelo === 'melena') { rect(5, 2, 5, 9, pelo); rect(13, 2, 13, 9, ps); }
+          if (estiloPelo === 'moño') caja(8, 0, 10, 0, pelo, { luz: 30, sombra: -20, abajo: false });
+          if (estiloPelo === 'coleta') { rect(14, 3, 14, 9, ps); px(14, 4, pelo); }
+          ceja();
+        }
       }
-      if (lentes) { rect(5, 5, 9, 5, '#1d1f2b'); px(6, 5, '#7fd1ff'); px(8, 5, '#7fd1ff'); }
-      // hair
-      if (estiloPelo === 'casco') { /* drawn with the face */ }
-      else if (estiloPelo === 'gorra') { rect(4, 1, 10, 2, ropa2); rect(8, 3, 11, 3, ropa2); rect(4, 3, 4, 4, pelo); }
-      else if (estiloPelo === 'rapado') { rect(5, 2, 9, 2, pelo); }
-      else {
-        rect(5, 1, 9, 2, pelo); rect(4, 2, 4, 4, pelo); rect(10, 2, 10, 4, pelo); px(5, 3, pelo); px(9, 3, pelo);
-        if (estiloPelo === 'largo') { rect(4, 2, 4, 10, pelo); rect(10, 2, 10, 10, pelo); }
-        if (estiloPelo === 'melena') { rect(4, 2, 4, 7, pelo); rect(10, 2, 10, 7, pelo); }
-        if (estiloPelo === 'moño') { rect(6, 0, 8, 0, pelo); }
+      // ---- the device of this visit (the only drawn detail that comes from the data) ----
+      if (dispositivo === 'escritorio') {
+        caja(6, 13, 12, 16, '#c9cfdc', { luz: 24, sombra: -34 }); px(9, 14, '#ffffff'); px(9, 15, '#e6ebf5');
+        rect(5, 17, 13, 17, '#7d8597'); px(5, 17, '#9aa2b4'); px(13, 17, '#5d6577');
+        px(5, 16, piel); px(13, 16, shade(piel, -20));
+      } else if (dispositivo === 'celular') {
+        caja(13, 14, 14, 17, '#23263a', { luz: 30, sombra: -10 }); px(13, 15, '#a9e4ff'); px(14, 15, '#7cc9f2'); px(13, 16, '#7cc9f2');
+      } else if (dispositivo === 'tableta') {
+        caja(6, 12, 12, 17, '#23263a', { luz: 30, sombra: -10 }); rect(7, 13, 11, 16, '#9fdcff'); px(7, 13, '#d6f1ff');
       }
-      // the device of this visit (the only drawn detail that comes from the data)
-      if (dispositivo === 'celular') { rect(8, 11, 9, 13, '#23263a'); px(8, 11, '#a9e4ff'); px(8, 12, '#7cc9f2'); px(9, 12, '#a9e4ff'); rect(10, 12, 10, 13, piel); }
-      else if (dispositivo === 'escritorio') { rect(5, 11, 9, 13, '#c5cbd8'); px(7, 12, '#ffffff'); rect(4, 14, 10, 14, '#7a8194'); px(4, 13, piel); px(10, 13, piel); }
-      else if (dispositivo === 'tableta') { rect(6, 10, 9, 14, '#23263a'); rect(7, 11, 8, 13, '#9fdcff'); }
       return dibujarCuadro(g);
     });
     return { frames, fase: r() * Math.PI * 2, paso: 120 + r() * 60, velocidad: 70 + r() * 40 };
   }
-  function shade(hex, d) { const n = parseInt(hex.slice(1), 16); const c = (s) => Math.max(0, Math.min(255, ((n >> s) & 255) + d)); return '#' + ((c(16) << 16) | (c(8) << 8) | c(0)).toString(16).padStart(6, '0'); }
   function dibujarCuadro(g) {
     const cv = document.createElement('canvas'); cv.width = FW; cv.height = FH; const x = cv.getContext('2d');
-    // dark outline around the silhouette, like a pixel sprite
-    for (let y = 0; y < FH; y++) for (let i = 0; i < FW; i++) if (!g[y][i] && [[1, 0], [-1, 0], [0, 1], [0, -1]].some(([dx, dy]) => g[y + dy] && g[y + dy][i + dx])) { x.fillStyle = BORDE; x.fillRect(i, y, 1, 1); }
+    // selective outline: an empty cell next to the figure takes a very dark version of the colour it touches
+    for (let y = 0; y < FH; y++) for (let i = 0; i < FW; i++) {
+      if (g[y][i]) continue;
+      const v = [[1, 0], [-1, 0], [0, 1], [0, -1]].map(([dx, dy]) => g[y + dy] && g[y + dy][i + dx]).find(Boolean);
+      if (v) { x.fillStyle = mezcla(v, '#0a0b16', .78); x.fillRect(i, y, 1, 1); }
+    }
     for (let y = 0; y < FH; y++) for (let i = 0; i < FW; i++) if (g[y][i]) { x.fillStyle = g[y][i]; x.fillRect(i, y, 1, 1); }
     return cv;
   }
@@ -366,7 +518,13 @@
   // ---------- Stage ----------
   const lienzo = $('lienzo'), ctx = lienzo.getContext('2d');
   let W = 0, H = 0, ESC = 3, dpr = 1;
-  const estado = { lente: 'sesiones', ind: null, destacado: null, figuras: [], grupos: [], gruposPrev: [], mezcla: 1, mezclaT0: 0, hover: null };
+  // stage colours of each theme (the canvas cannot read CSS variables)
+  const ESCENAS = {
+    oscuro: { fondoA: '#0e1638', fondoB: '#060917', lineas: '#cfd6ff', lineasAlfa: .07, foco: '#1c2340', cono: .26, piso: .42, sombra: 'rgba(0,0,0,.42)', hover: 'rgba(255,255,255,.22)' },
+    claro: { fondoA: '#f7f9fe', fondoB: '#dde4f1', lineas: '#151f47', lineasAlfa: .08, foco: '#9aa6bd', cono: .22, piso: .34, sombra: 'rgba(21,31,71,.26)', hover: 'rgba(76,100,217,.22)' },
+  };
+  const ESCENA = () => ESCENAS[tema];
+  const estado = { lente: 'usuarios', ind: null, destacado: null, figuras: [], grupos: [], gruposPrev: [], mezcla: 1, mezclaT0: 0, hover: null };
   const params = new URLSearchParams(location.search);
 
   function crearFiguras() {
@@ -383,9 +541,9 @@
     const n = estado.ind ? gruposVisibles().length : 1;
     const cols = columnas(n);
     const filas = Math.ceil(n / cols);
-    const altoFila = ESC === 2 ? 270 : 380;
-    H = Math.max(ESC === 2 ? 360 : 540, Math.min(filas * altoFila + 40, filas === 1 ? Math.max(540, Math.min(680, innerHeight * .72)) : 9999));
-    if (filas === 1 && ESC === 2) H = Math.max(H, 360);
+    const altoFila = ESC === 2 ? 300 : 420;
+    H = Math.max(ESC === 2 ? 390 : 600, Math.min(filas * altoFila + 40, filas === 1 ? Math.max(600, Math.min(740, innerHeight * .74)) : 9999));
+    if (filas === 1 && ESC === 2) H = Math.max(H, 390);
     lienzo.width = Math.round(W * dpr); lienzo.height = Math.round(H * dpr); lienzo.style.height = H + 'px';
   }
   const columnas = (n) => (n <= 1 ? 1 : W >= 1000 ? n : W >= 640 ? Math.min(n, 4) : Math.min(n, 2));
@@ -399,8 +557,10 @@
 
   // Positions inside a floor ellipse, nearest to the centre first, on a staggered grid. When the crowd does not fit,
   // the ellipse grows mostly in depth (ry) so a group never spills into the next column.
+  // places on the floor, scaled to the 19 × 29 figures
+  const PASO_X = 9.2, PASO_Y = 5.2;
   function puestos(k, cx, cy, rx, ry, rxMax) {
-    const dx = ESC * 7.4, dy = ESC * 4.6, out = [];
+    const dx = ESC * PASO_X, dy = ESC * PASO_Y, out = [];
     for (let fila = -40; fila <= 40; fila++) for (let col = -40; col <= 40; col++) {
       const x = (col + (fila % 2 ? .5 : 0)) * dx, y = fila * dy;
       const d = (x * x) / (rx * rx) + (y * y) / (ry * ry);
@@ -423,7 +583,7 @@
     const piso = ESC === 3 ? 60 : 40;
     if (!ind) {
       const rx = Math.min(W * .36, ESC === 3 ? 420 : 170), ry = rx * (ESC === 3 ? .26 : .34);
-      grupos = [{ key: 'todas', label: '', color: COL.crema, n: lista.length, cx: W / 2, cy: H * .66, rx, ry, rxMax: W * .44, fondoFila: H - piso, miembros: lista }];
+      grupos = [{ key: 'todas', label: '', tono: 'crema', color: COL.crema, n: lista.length, cx: W / 2, cy: H * .66, rx, ry, rxMax: W * .44, fondoFila: H - piso, miembros: lista }];
     } else {
       const vis = gruposVisibles();
       const cols = columnas(vis.length), filas = Math.ceil(vis.length / cols), anchoCol = W / cols, altoFila = H / filas;
@@ -431,10 +591,10 @@
         const col = i % cols, fila = Math.floor(i / cols);
         const restantes = vis.length - fila * cols, enFila = Math.min(cols, restantes);
         const desplaz = (cols - enFila) * anchoCol / 2;
-        const area = Math.max(g.n, 1) * (ESC * 7.4) * (ESC * 4.6) * 1.15;
+        const area = Math.max(g.n, 1) * (ESC * PASO_X) * (ESC * PASO_Y) * 1.15;
         const prop = ESC === 3 ? .3 : .36;
         const rxMax = anchoCol * .4;
-        let rx = Math.sqrt(area / (Math.PI * prop)); rx = Math.max(rx, ESC * 14); rx = Math.min(rx, rxMax);
+        let rx = Math.sqrt(area / (Math.PI * prop)); rx = Math.max(rx, ESC * 17); rx = Math.min(rx, rxMax);
         const ry = rx * prop;
         return { ...g, cx: desplaz + anchoCol * (col + .5), cy: altoFila * fila + altoFila * .7, rx, ry, rxMax, techo: altoFila * fila + 14, fondoFila: altoFila * (fila + 1) - piso, miembros: lista.filter((u) => u.u[ind.key] === g.key) };
       });
@@ -521,7 +681,7 @@
     if (!ind) { cuerpo.innerHTML = `<p style="color:var(--tinta-3)">Elige un indicador para ver sus cifras.</p>`; return; }
     const total = estado.lente === 'sesiones' ? D.sesiones : D.usuarios;
     const filas = ind.cats.map((c) => { const n = unidades[estado.lente].filter((u) => u[ind.key] === c.key).length; const real = realDe(estado.lente, ind.key, c.key); const conteo = conteoDe(estado.lente, ind.key, c.key); return `<tr><td>${c.label}</td><td>${n}</td><td>${real == null ? '—' : fmt(real) + ' %'}</td><td>${conteo == null ? '—' : miles(Math.round(conteo))}</td></tr>`; }).join('');
-    cuerpo.innerHTML = `<table><caption class="sr-only">${ind.label}</caption><thead><tr><th>${ind.label}</th><th>De cada 100 ${lente.unidad}</th><th>En los datos</th><th>${lente.unidad.charAt(0).toUpperCase() + lente.unidad.slice(1)} reales (de ${miles(total)})</th></tr></thead><tbody>${filas}</tbody></table>`;
+    cuerpo.innerHTML = `<table><caption class="sr-only">${ind.label}</caption><thead><tr><th>${ind.label}</th><th><span class="larga">De cada 100 ${lente.unidad}</span><span class="corta">De 100</span></th><th><span class="larga">En los datos</span><span class="corta">%</span></th><th><span class="larga">${lente.unidad.charAt(0).toUpperCase() + lente.unidad.slice(1)} reales (de ${miles(total)})</span><span class="corta">Reales (de ${miles(total)})</span></th></tr></thead><tbody>${filas}</tbody></table>`;
   }
 
   // ---------- Drawing ----------
@@ -531,23 +691,34 @@
     const { cx, cy, rx, ry, color } = g;
     const techo = g.techo || 14;
     // light fixture
-    ctx.fillStyle = rgba('#1c2340', alfa); ctx.fillRect(cx - 9, techo - 6, 18, 6);
+    ctx.fillStyle = rgba(ESCENA().foco, alfa); ctx.fillRect(cx - 9, techo - 6, 18, 6);
     ctx.fillStyle = rgba(color, .9 * alfa); ctx.fillRect(cx - 5, techo, 10, 2);
     // cone
     const grad = ctx.createLinearGradient(0, techo, 0, cy + ry);
-    grad.addColorStop(0, rgba(color, .26 * alfa)); grad.addColorStop(1, rgba(color, .05 * alfa));
+    grad.addColorStop(0, rgba(color, ESCENA().cono * alfa)); grad.addColorStop(1, rgba(color, .05 * alfa));
     ctx.fillStyle = grad; ctx.beginPath(); ctx.moveTo(cx - 6, techo + 2); ctx.lineTo(cx + 6, techo + 2); ctx.lineTo(cx + rx * 1.12, cy); ctx.lineTo(cx - rx * 1.12, cy); ctx.closePath(); ctx.fill();
     // floor
     const piso = ctx.createRadialGradient(cx, cy, 0, cx, cy, rx * 1.2);
-    piso.addColorStop(0, rgba(color, .42 * alfa)); piso.addColorStop(1, rgba(color, .06 * alfa));
+    piso.addColorStop(0, rgba(color, ESCENA().piso * alfa)); piso.addColorStop(1, rgba(color, .06 * alfa));
     ctx.save(); ctx.translate(cx, cy); ctx.scale(1, (ry * 1.25) / (rx * 1.2)); ctx.beginPath(); ctx.arc(0, 0, rx * 1.2, 0, Math.PI * 2); ctx.fillStyle = piso; ctx.fill(); ctx.lineWidth = 1.2; ctx.strokeStyle = rgba(color, .38 * alfa); ctx.stroke(); ctx.restore();
+  }
+  // a dithered pixel shadow on the floor, like 16-bit sprites: full blocks in the middle, a checkerboard at the edge
+  function sombraPixel(fx, fy, s, color, radio) {
+    ctx.fillStyle = color;
+    const x0 = Math.round(fx), y0 = Math.round(fy);
+    for (let dy = -1; dy <= 1; dy++) for (let dx = -Math.ceil(radio); dx <= Math.ceil(radio); dx++) {
+      const d = (dx * dx) / (radio * radio) + (dy * dy) / 2.2;
+      if (d > 1) continue;
+      if (d > .55 && ((dx + dy) & 1)) continue;
+      ctx.fillRect(x0 + dx * s - s / 2, y0 + dy * s - s / 2, s, s);
+    }
   }
   function fondo() {
     const g = ctx.createRadialGradient(W / 2, H * .55, 0, W / 2, H * .55, Math.max(W, H) * .8);
-    g.addColorStop(0, '#0e1638'); g.addColorStop(1, '#060917');
+    g.addColorStop(0, ESCENA().fondoA); g.addColorStop(1, ESCENA().fondoB);
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     // faint floor lines in perspective
-    ctx.save(); ctx.globalAlpha = .07; ctx.strokeStyle = '#cfd6ff'; ctx.lineWidth = 1;
+    ctx.save(); ctx.globalAlpha = ESCENA().lineasAlfa; ctx.strokeStyle = ESCENA().lineas; ctx.lineWidth = 1;
     const hz = H * .42;
     for (let i = -14; i <= 14; i++) { ctx.beginPath(); ctx.moveTo(W / 2 + i * 18, hz); ctx.lineTo(W / 2 + i * W * .12, H); ctx.stroke(); }
     for (let k = 1; k <= 7; k++) { const y = hz + (H - hz) * Math.pow(k / 7, 1.8); ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
@@ -581,8 +752,8 @@
     for (const f of orden) {
       const fx = Math.round(f.x), fy = Math.round(f.y);
       // shadow
-      ctx.fillStyle = 'rgba(0,0,0,.35)'; ctx.beginPath(); ctx.ellipse(fx, fy, w * .36, s * 1.6, 0, 0, Math.PI * 2); ctx.fill();
-      if (estado.hover === f) { ctx.fillStyle = 'rgba(255,255,255,.28)'; ctx.beginPath(); ctx.ellipse(fx, fy, w * .55, s * 2.6, 0, 0, Math.PI * 2); ctx.fill(); }
+      sombraPixel(fx, fy, s, ESCENA().sombra, 5.5);
+      if (estado.hover === f) sombraPixel(fx, fy, s, ESCENA().hover, 8);
       const frame = f.mov ? f.frames[1 + (Math.floor(ahora / f.paso) % 2)] : f.frames[0];
       const bob = !f.mov && !reducir && Math.sin(ahora / 900 + f.fase) > .93 ? -s : 0;
       ctx.save();
@@ -649,7 +820,7 @@
     const actual = todos.find((x) => x.key === estado.ind);
     const enMenu = actual && !actual.principal;
     const m = document.createElement('button'); m.type = 'button'; m.className = 'menu-boton';
-    m.textContent = enMenu ? actual.label : 'Todos los indicadores';
+    m.innerHTML = (enMenu ? actual.label : 'Todos los indicadores') + ' <span class="fa" aria-hidden="true">&#xf078;</span>';
     m.setAttribute('aria-pressed', String(!!enMenu)); m.setAttribute('aria-expanded', String(!panel.hidden)); m.setAttribute('aria-controls', 'menu-panel');
     m.addEventListener('click', (e) => { e.stopPropagation(); const abrir = panel.hidden; panel.hidden = !abrir; m.setAttribute('aria-expanded', String(abrir)); if (abrir) panel.querySelector('button[aria-pressed="true"], button')?.focus(); });
     caja.appendChild(m);
@@ -661,7 +832,7 @@
       sec.innerHTML = `<h3>${t}</h3>`;
       const ul = document.createElement('ul');
       for (const i of todos.filter((x) => x.tema === t)) {
-        const li = document.createElement('li'); const b = document.createElement('button'); b.type = 'button';
+        const li = document.createElement('li'); const b = document.createElement('button'); b.type = 'button'; b.dataset.ver = i.key;
         b.setAttribute('aria-pressed', String(estado.ind === i.key));
         b.innerHTML = `${i.label}<small>${i.cats.map((c) => c.label.split(' (')[0]).slice(0, 4).join(' · ')}${i.cats.length > 4 ? '…' : ''}</small>`;
         b.addEventListener('click', () => elegirIndicador(i.key));
@@ -679,7 +850,7 @@
     medir(); crearFiguras(); pintarChips(); maquetar(true); guardarURL(); quitarIntro(); mostrarFicha(null);
   }
   document.querySelectorAll('.lentes button').forEach((b) => b.addEventListener('click', () => cambiarLente(b.dataset.lente)));
-  function guardarURL() { const p = new URLSearchParams(); if (estado.lente !== 'sesiones') p.set('lente', estado.lente); if (estado.ind) p.set('ver', estado.ind); history.replaceState(null, '', p.toString() ? '?' + p : location.pathname); }
+  function guardarURL() { const p = new URLSearchParams(); if (estado.lente !== 'usuarios') p.set('lente', estado.lente); if (estado.ind) p.set('ver', estado.ind); history.replaceState(null, '', p.toString() ? '?' + p : location.pathname); }
   // The figures walk in once (at the question of the intro, or at the first interaction).
   function entrar() { if (!estado.entraron) maquetar(true); }
   function quitarIntro() { $('intro').classList.add('es-oculta'); entrar(); }
@@ -717,23 +888,54 @@
     <h3>Privacidad</h3>
     <p>Solo se usan totales del tablero de Clarity: ningún nombre, correo, empresa, dirección IP ni grabación de una persona.</p>`;
 
+  // ---------- Theme switch (sun / moon) ----------
+  // Light by default (the neumorphic shadows only read on a light surface); the choice is remembered on this device.
+  const boton = $('tema');
+  function ponerTema(t, guardar) {
+    tema = t === 'oscuro' ? 'oscuro' : 'claro';
+    if (tema === 'oscuro') document.documentElement.dataset.tema = 'oscuro'; else delete document.documentElement.dataset.tema;
+    boton.setAttribute('aria-checked', String(tema === 'oscuro'));
+    document.querySelector('meta[name=theme-color]').setAttribute('content', tema === 'oscuro' ? '#0b1022' : '#f3f6fc');
+    for (const g of [...estado.grupos, ...estado.gruposPrev]) if (g.tono) g.color = COL[g.tono];
+    if (guardar) { try { localStorage.setItem('actuariaplus-en-100-tema', tema); } catch (e) { /* private mode */ } }
+  }
+  boton.addEventListener('click', () => { ponerTema(tema === 'oscuro' ? 'claro' : 'oscuro', true); pintarRotulos(); pintarTexto(); });
+  try { if (localStorage.getItem('actuariaplus-en-100-tema') === 'oscuro') ponerTema('oscuro'); } catch (e) { /* private mode */ }
+  if (params.get('tema') === 'oscuro' || params.get('tema') === 'claro') ponerTema(params.get('tema'));
+
+  // ---------- Share ----------
+  // The system share sheet when there is one (phones, Windows, Mac); otherwise the link of this view is copied.
+  const aviso = $('aviso');
+  function avisar(texto) { aviso.textContent = texto; $('compartir').classList.add('es-listo'); clearTimeout(avisar.t); avisar.t = setTimeout(() => { aviso.textContent = ''; $('compartir').classList.remove('es-listo'); }, 3500); }
+  $('compartir').addEventListener('click', async () => {
+    const url = location.href;
+    try {
+      if (navigator.share) { await navigator.share({ title: document.title, text: $('frase').textContent, url }); return; }
+      await navigator.clipboard.writeText(url);
+      avisar('Enlace copiado: pégalo donde quieras.');
+    } catch (e) {
+      if (e && e.name === 'AbortError') return;
+      avisar('No se pudo compartir: copia la dirección de la barra del navegador.');
+    }
+  });
+
   // ---------- Start ----------
   $('periodo').textContent = D.periodo.corto;
   function pintarTotales() { const s = estado.lente === 'sesiones'; $('total-n').textContent = miles(s ? D.sesiones : D.usuarios); $('total-unidad').textContent = s ? 'sesiones' : 'usuarios'; }
   $('pie-periodo').textContent = D.periodo.texto;
-  if (params.get('lente') === 'usuarios') { estado.lente = 'usuarios'; document.querySelectorAll('.lentes button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lente === 'usuarios'))); }
+  if (params.get('lente') === 'sesiones') { estado.lente = 'sesiones'; document.querySelectorAll('.lentes button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lente === 'sesiones'))); }
   const pedido = params.get('ver');
   if (pedido && LENTES[estado.lente].indicadores.some((i) => i.key === pedido)) estado.ind = pedido;
   pintarTotales();
   medir(); crearFiguras(); pintarChips(); if (!estado.ind) pintarTexto();
   // the crowd waits off to both sides and walks in on cue
   for (const f of estado.figuras) { f.x = Math.random() < .5 ? -40 - Math.random() * 120 : W + 40 + Math.random() * 120; f.y = H * (.55 + Math.random() * .3); f.tx = f.x; f.ty = f.y; f.t0 = 0; f.retraso = 0; }
-  const conIntro = !estado.ind && estado.lente === 'sesiones' && !reducir;
+  const conIntro = !estado.ind && estado.lente === 'usuarios' && !reducir;
   if (conIntro) {
     // 1) the real visits counted up, 2) «¿Y si fueran 100?» and the 100 walk in, 3) the intro fades away
-    $('intro-periodo').textContent = D.periodo.texto.charAt(0).toUpperCase() + D.periodo.texto.slice(1) + ' · de ' + miles(D.usuarios) + ' usuarios distintos';
+    $('intro-periodo').textContent = D.periodo.texto.charAt(0).toUpperCase() + D.periodo.texto.slice(1) + ' · ' + miles(D.sesiones) + ' sesiones';
     const num = $('intro-num'), t0 = performance.now(), dur = 1800;
-    const contar = (ahora) => { const t = Math.min(1, (ahora - t0) / dur); num.textContent = miles(Math.round(D.sesiones * (1 - Math.pow(1 - t, 3)))); if (t < 1 && !estado.entraron) requestAnimationFrame(contar); else num.textContent = miles(D.sesiones); };
+    const contar = (ahora) => { const t = Math.min(1, (ahora - t0) / dur); num.textContent = miles(Math.round(D.usuarios * (1 - Math.pow(1 - t, 3)))); if (t < 1 && !estado.entraron) requestAnimationFrame(contar); else num.textContent = miles(D.usuarios); };
     requestAnimationFrame(contar);
     setTimeout(() => { if (!$('intro').classList.contains('es-oculta')) { $('intro').classList.add('es-fase2'); entrar(); } }, 2700);
     setTimeout(quitarIntro, 5600);
